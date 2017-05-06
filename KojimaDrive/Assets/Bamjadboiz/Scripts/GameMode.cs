@@ -142,7 +142,6 @@ namespace Bam
                         TeamDistributorAttribute attribute = (TeamDistributorAttribute)System.Attribute.GetCustomAttribute(type, typeof(TeamDistributorAttribute));
                         if (attribute == null)
                         {
-                            Debug.LogWarning("Team Distributor \"" + type.FullName + "\" doesnt have the TeamDistributor attribute!");
                             continue;
                         }
 
@@ -410,7 +409,6 @@ namespace Bam
                             if (possibleMembers.Count <= 0)
                             {
                                 //There arent enough players in the game to fully populate the teams. Something broke
-                                Debug.LogError("Not enough players in game to populate teams.");
                                 return;
                             }
 

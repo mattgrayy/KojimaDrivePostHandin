@@ -25,23 +25,7 @@ namespace Bam
             {
                 if (c.m_nplayerIndex == volcanoMadness.GetRunnerID+1)
                 {
-                    if (winCondition == false)
-                    {
-                        Debug.Log("Runner: " + col.gameObject.name + " is out of bounds!");
-                    }
-                    else
-                    {
-                        Debug.Log("Runner: " + col.gameObject.name + " reached the end!");
-                    }
-
                     volcanoMadness.EndRound(winCondition);
-                }
-                else
-                {
-                    if (col.gameObject.tag == "Player")
-                    {
-                        Debug.Log("Blocker: " + col.gameObject.name + " is out of bounds!");
-                    }
                 }
             }
         }

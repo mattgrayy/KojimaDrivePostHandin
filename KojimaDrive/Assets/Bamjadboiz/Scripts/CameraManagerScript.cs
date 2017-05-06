@@ -104,7 +104,6 @@ namespace Kojima
 
             if (GameController.s_ncurrentPlayers == 3)
             {
-                Debug.Log("3 po");
                 //newSS.camInfos[0].m_positionOnScreen = Bam.PlayerCameraScript.screenPositions_e.topHalf;
                 newSS.camInfos[2].m_positionOnScreen = Bam.PlayerCameraScript.screenPositions_e.bottomHalf;
             }
@@ -237,10 +236,6 @@ namespace Kojima
                         playerCameras[i].SetupCamera(upcomingScreenSetup.camInfos[i]);
                     }
                 }
-            }
-            else
-            {
-                Debug.LogError("Camera Manager: There aren't any players!");
             }
 
             upcomingScreenSetup = new screenSetup_s();

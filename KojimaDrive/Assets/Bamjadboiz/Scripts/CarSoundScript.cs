@@ -253,8 +253,6 @@ namespace Bam
 
             for (int i = 0; i < col.contacts.Length; i++)
             {
-                if (Input.GetKey(KeyCode.G))
-                    Debug.Break();
 
                 float dot = Vector3.Dot(col.contacts[i].normal.normalized, col.relativeVelocity.normalized);
                 //Debug.Log(col.relativeVelocity.normalized + " / Magnitude of " + col.relativeVelocity.magnitude + " /  Dot: " + dot + " / Intensity: " + dot);

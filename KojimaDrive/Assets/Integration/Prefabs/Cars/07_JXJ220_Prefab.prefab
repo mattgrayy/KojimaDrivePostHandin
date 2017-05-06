@@ -4259,7 +4259,10 @@ MonoBehaviour:
   - {fileID: 106802}
   - {fileID: 147954}
   - {fileID: 140438}
+  carType: 0
+  baseMesh: {fileID: 4300000, guid: 2660374254d4dfc449568fc6ad415759, type: 3}
   m_fdmgMod: 1
+  resetDeform: 0
 --- !u!114 &114000014002403938
 MonoBehaviour:
   m_ObjectHideFlags: 1

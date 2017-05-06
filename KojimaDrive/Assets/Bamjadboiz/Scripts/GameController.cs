@@ -6,11 +6,6 @@ namespace Kojima
 {
     public class GameController : MonoBehaviour
     {
-#if UNITY_EDITOR
-		void OnDrawGizmos() {
-			Gizmos.DrawIcon(transform.position, "GameManager.png", true);
-		}
-#endif
 
 		public static GameController s_singleton;
 
@@ -153,7 +148,6 @@ namespace Kojima
 					}
                     else
                     {
-                        Debug.LogWarning("One of GameController's auto-spawn prefabs is missing!");
 						m_CreatedObjectReferences[i] = null;
 
 					}
@@ -178,7 +172,6 @@ namespace Kojima
 
         public void PlayerHasDroppedOut(int playerIndex)
         {
-            Debug.Log("Player " + playerIndex + " has dropped out!");
             s_ncurrentPlayers--;
 
             for (int i=playerIndex; i<=m_players.Length; i++)
@@ -192,7 +185,6 @@ namespace Kojima
                         m_players[i - 1] = null;
 
                         playerToMove.SetNewPlayerIndex(playerToMove.m_nplayerIndex - 1);
-                        Debug.Log("Player " + i + " is now Player " + playerToMove.m_nplayerIndex);                        
                     }
                 }
             }
@@ -203,7 +195,6 @@ namespace Kojima
         public void SwapPlayers(int index1, int index2)
         {
             CarScript temp = m_players[index1];
-            Debug.Log("player " + index1 + " swapping with player " + index2);
 
             m_players[index1] = m_players[index2];
 

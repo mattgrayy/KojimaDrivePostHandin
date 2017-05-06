@@ -147,9 +147,6 @@ namespace Bam
 					skidMarks.Remove(skidData);
 				}
 			}
-
-
-			//Debug.Log(skidMarks.Count + " skid marks");
 		}
 
         void LateUpdate()
@@ -285,11 +282,6 @@ namespace Bam
 
 			//Reset the timer so that it doesnt despawn while its in use
 			meshData.creationTime = Time.time;
-
-
-			//Debug.Log("Updating skid mesh " + i + ": " + verts.Count + " verts, " + tris.Count + " tris. Pos: " + meshData.position);
-
-			//Debug.DrawLine(skidPoint + right * -0.5f * skidWidth, skidPoint + right * 0.5f * skidWidth, Color.white, 3f);
 		}
 
 	}

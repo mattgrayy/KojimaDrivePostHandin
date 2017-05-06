@@ -31,18 +31,11 @@ namespace Kojima
 
         public Vector3 GetLastSafePosition()
         {
-            Debug.Log("Getting last safe car position.");
-            return m_safePos;//m_positions.peekAtDepth(1);
+            return m_safePos;
         }
-
-        //public void  ResetRecord()
-        //{
-        //    //m_positions.reset();
-        //}
 
         public void ForceRecord()
         {
-            // m_positions.push(transform.position);
             m_safePos = transform.position;
         }
 
@@ -76,8 +69,6 @@ namespace Kojima
                 m_safePos = transform.position;
                 m_shouldRecord = false;
                 m_recordTimer.Restart();
-
-                if (m_debugLog) Debug.Log("Recording car position.");
             }
         }
 

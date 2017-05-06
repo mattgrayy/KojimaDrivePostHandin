@@ -36,8 +36,6 @@ namespace Kojima
         public Bird.HUDController m_PlayerHUD = null;
         public Bird.WorldHUD m_WorldUI = null;
 
-        string stringForGizmoDebug;
-
         [System.Serializable]
         public struct CarInfo_s
         {
@@ -391,7 +389,6 @@ namespace Kojima
                 GameController.s_ncurrentPlayers++;
                 GameController.s_singleton.m_players[m_nplayerIndex - 1] = this;
                 m_changedGCCount = true;
-                //Debug.Log("Current players: " + GameController.s_ncurrentPlayers);
             }
             else
             {
@@ -435,14 +432,8 @@ namespace Kojima
                 if (GameController.s_singleton.m_players[i] == null)
                 {
                     SetNewPlayerIndex(i + 1);
-                    Debug.LogWarning("Player index auto-corrected to " + m_nplayerIndex + " on " + gameObject.name + "!");
                     break;
                 }
-            }
-
-            if(m_nplayerIndex==0)
-            {
-                Debug.LogWarning("" + gameObject.name + " hasn't been auto-assigned a player number!");
             }
         }
 
@@ -459,7 +450,6 @@ namespace Kojima
 			m_susScript = gameObject.AddComponent<Bam.CarSuspensionScript>();
             m_susScript.Initialise(m_carBody, 1, this);
 
-            //PullOutGlider();
             if(!respawnManager)
             {
                 respawnManager = FindObjectOfType<RespawnManager>();
@@ -482,7 +472,6 @@ namespace Kojima
 
         public void SetNewPlayerIndex(int newIndex)
         {
-            //Debug.Log(gameObject.name + " is now player " + newIndex);
             m_nplayerIndex = newIndex;
             m_rewiredPlayer = ReInput.players.GetPlayer(m_nplayerIndex - 1);
         }
@@ -516,7 +505,6 @@ namespace Kojima
         {
             if (m_nplayerIndex > 0)
             {
-              //  Debug.Log("Removed player " + m_nplayerIndex + "'s car from the scene.");
                 GameController.s_singleton.m_players[m_nplayerIndex - 1] = null;
             }
 
@@ -549,7 +537,6 @@ namespace Kojima
             if (!droppingOut && m_changedGCCount)
             {
                 GameController.s_ncurrentPlayers--;
-                Debug.Log("Current players: " + GameController.s_ncurrentPlayers);
                 m_changedGCCount = false;
             }
         }
@@ -557,7 +544,6 @@ namespace Kojima
         public void ApplyCarInfo(CarInfo_s newInfo)
         {
             m_baseCarInfo = newInfo;
-            //m_soundScript.SetSounds(m_baseCarInfo.m_engineAudioClip, m_baseCarInfo.m_accelerationAudioClip);
         }
 
         public Vector3 GetVelocity()
@@ -674,8 +660,6 @@ namespace Kojima
         // Update is called once per frame
         void FixedUpdate()
         {
-            //Resets the string
-            stringForGizmoDebug = "No debug info right now";
 
             if (CurrentlyInWater) 
 			{
@@ -829,7 +813,6 @@ namespace Kojima
                 if (m_respawnCounter < 1)
                 {
                     m_respawnCounter += Time.deltaTime * 0.25f;
-                    //Debug.Log(m_respawnCounter);
                 }
                 else
                 {
@@ -1010,8 +993,6 @@ namespace Kojima
 
             m_gliderBuiltupSpeed = Mathf.Clamp(m_gliderBuiltupSpeed, 0, 60);
 
-            stringForGizmoDebug += "\n Glider built up speed: " + m_gliderBuiltupSpeed;
-
             input = transform.TransformDirection(input);
             m_rb.AddTorque(input * glideTurnSpd, ForceMode.Acceleration);
 
@@ -1025,14 +1006,13 @@ namespace Kojima
             Vector3 dir = transform.forward;
             dir.y = 0;
             dir = dir.normalized;
-            Debug.DrawLine(transform.position, transform.position + dir * 3, Color.cyan);
+
             Quaternion standardRot = Quaternion.LookRotation(dir, Vector3.up);
             m_rb.rotation = Quaternion.Lerp(m_rb.rotation, standardRot, 4 * Time.deltaTime);
         }
 
         public void ApplyHandbrake()
         {
-            Debug.DrawLine(transform.position, transform.position + transform.right * skiddingRight);
             m_rb.AddForce(transform.right * skiddingRight * 15 * m_normalisedForwardVelocity * m_rb.angularVelocity.y, ForceMode.Acceleration);
 
             //Don't let the car just drive and handbrake
@@ -1058,26 +1038,6 @@ namespace Kojima
             }
         }
 
-        void OnDrawGizmos()
-        {
-#if UNITY_EDITOR
-			if (m_nplayerIndex == 1)
-            {
-                UnityEditor.Handles.Label(transform.position + Vector3.up * 1.5f, "Normalised Speed: " + m_normalisedForwardVelocity);
-                UnityEditor.Handles.Label(transform.position+Vector3.up, stringForGizmoDebug);
-                //UnityEditor.Handles.Label(transform.position, "CancelHori: " + m_fcancelHoriForce);
-
-                //for (int i=0; i<4; i++)
-                //{
-                //    if(m_wheelIsSkidding[i])
-                //    {
-                //        Gizmos.DrawSphere(m_wheels[i].transform.position, 0.425f);
-                //    }
-                //}
-            }
-#endif
-		}
-
         void MakeWheelSkid(int wheelIndex)
         {
             float skidTransitionSpeed = 6.0f;
@@ -1089,7 +1049,6 @@ namespace Kojima
             m_fcancelHoriForce = Mathf.Lerp(m_fcancelHoriForce, 0, skidTransitionSpeed * Time.deltaTime);
 
             m_fcurSkidIntensity = Mathf.Abs(GetVelocity().magnitude);
-            //Debug.Log(m_fcurSkidIntensity);
         }
 
         public bool IsWheelGrounded(int index)
@@ -1170,42 +1129,16 @@ namespace Kojima
                         thisWheelCanDrive = false;
                         m_handBrake = false;
                     }
-                    else
-                    {
-                        ////Check if surface is too steep
-                        //float steepnessMax = 0.22f;
-
-                        //if (m_wheelInfos[i].m_steepValue > steepnessMax && !m_climbAllWalls)
-                        //{
-                        //    thisWheelCanDrive = false;
-                        //    stringForGizmoDebug = "Floor too steep here!! Steepness value: " + m_wheelInfos[i].m_steepValue;
-                        //    m_rb.AddForce(m_wheelRaycasts[i].normal * 2, ForceMode.Acceleration);
-                        //}
-                    }
 
                     if (IsWheelGrounded(i))
                     {
                         PreventSkidding(i);
-
-                        //if(CurrentlyHandbraking)
-                        //{
-                        //    Vector3 forwardForce = transform.InverseTransformDirection(m_rb.velocity);
-                        //    forwardForce.x = 0;
-                        //    forwardForce.y = 0;
-
-                        //    forwardForce = transform.TransformDirection(forwardForce);
-
-                        //    m_rb.AddForce(-forwardForce * 0.25f, ForceMode.Acceleration);
-                        //}
                     }
                     else
                     {
                         //Adds some angular drag to prevent really quick spinning in mid air
                         m_rb.angularDrag += 0.2f;
                     }
-
-                    //Rewired
-                    //bool moving = m_rewiredPlayer.GetAxis("Accelerator") != 0 || m_rewiredPlayer.GetAxis("Brake") != 0;
 
                     //Steering
                     float steerAmount = 0, handbrakeTurnAmount = 0;
@@ -1240,14 +1173,12 @@ namespace Kojima
                             float forwardMultiplier = accelerationInput + brakeInput;
 
                             Vector3 wheelDirection = GetWheelDirection(i, forwardMultiplier);
-                            Debug.DrawLine(m_wheels[i].transform.position, m_wheels[i].transform.position + wheelDirection * 5, Color.green);
 
                             Vector3 accelerationForce = wheelDirection * GetAcceleration() * accelerationInput;
                             Vector3 brakeForce = wheelDirection * GetAcceleration() * Mathf.Abs(brakeInput);
 
                             //Allow cars a bit more acceleration when going uphill just incase
                             accelerationForce *= 1 + Mathf.Clamp(Mathf.Abs(wheelDirection.y * 20), 0, 1);
-                            //stringForGizmoDebug += "\nAF = " + accelerationForce;
 
                             if (!s_playersCanMove || !m_canIMove)
                             {
@@ -1368,8 +1299,6 @@ namespace Kojima
                 steepLimit = 100;
             }
 
-            stringForGizmoDebug = "Steepness = " + direction.y;
-
             if (direction.y > steepLimit)
             {
                 direction.y = -steepLimit;
@@ -1446,7 +1375,6 @@ namespace Kojima
 
                     float reduction = steerSpeedMaxReduction * (Mathf.Abs(m_normalisedForwardVelocity) * (1 - steerSpeedMinimumNormalised));
                     curTorqueSpeed -= reduction;
-                    //curTorqueSpeed *= slowTurningAtHighSpeedsScalar;
                     curTorqueSpeed = Mathf.Clamp(curTorqueSpeed, 0, steerAccMax);
                 }
 
@@ -1457,13 +1385,7 @@ namespace Kojima
                         curTorqueSpeed *= 0.5f;
                     }
 
-                    //stringForGizmoDebug = "Torque Speed = " + curTorqueSpeed;
                     Vector3 torque = transform.up * dir * (curTorqueSpeed);
-
-                    if (m_nplayerIndex == 1)
-                    {
-                        //Debug.Log("Wheel " + index + " Torque: " + torque + " and Dir: " + dir);
-                    }
 
                     m_rb.AddTorque(torque, ForceMode.Acceleration);
                     steerAmount = torque.magnitude;
@@ -1475,26 +1397,6 @@ namespace Kojima
                 }
             }
         }
-
-        //void ApplyHandbrakeTorque(int index, out float steerAmount)
-        //{
-        //    steerAmount = 0;
-
-        //    if (CurrentlyHandbraking && index>1)
-        //    {
-        //        if (m_wheelIsGrounded[index])
-        //        {
-        //            float curTorqueSpeed = 0;
-
-        //            curTorqueSpeed = Mathf.Abs(GetVelocity().magnitude);
-        //            curTorqueSpeed = Mathf.Clamp(curTorqueSpeed, -m_baseCarInfo.m_fturnMaxSpeed, m_baseCarInfo.m_fturnMaxSpeed);
-
-        //            Vector3 torque = m_handBrakeTorque.normalized * curTorqueSpeed;
-        //            m_rb.AddTorque(torque, ForceMode.Acceleration);
-        //            steerAmount = torque.magnitude;
-        //        }
-        //    }
-        //}
 
         void MaintainMaxSpeed()
         {
@@ -1619,24 +1521,6 @@ namespace Kojima
             }
         }
 
-
-        void OnCollisionEnter(Collision col)
-        {
-            //m_carBody.transform.position += m_rb.velocity * 0.01f;
-            float intensity = col.relativeVelocity.magnitude;
-
-            //Debug.Log(gameObject.name + " has hit " + col.gameObject.name);
-
-            if (Vector3.Dot(transform.forward, col.contacts[0].normal) < -0.2f)
-            {
-                //StartCoroutine("InitialAccelerationBounce");
-            }
-            else
-            {
-                //Debug.Log(rb.velocity);
-            }
-        }
-
         void RotateWheel(int index)
         {
             Transform wheel = m_wheels[index];
@@ -1667,7 +1551,6 @@ namespace Kojima
             {
                 if (floor.distance < 25)
                 {
-                    Debug.DrawLine(transform.position, floor.point);
                     transform.position = floor.point;
                     
                 }
@@ -1677,6 +1560,8 @@ namespace Kojima
 
             m_rb.velocity = Vector3.zero;
             m_rb.angularVelocity = Vector3.zero;
+
+            GetComponent<MeshDeformer>().resetDeformation();
 
             for (int i = 0; i < m_wheels.Length; i++)
             {
@@ -1726,19 +1611,10 @@ namespace Kojima
             float rotationSkidMultiplier = 0.15f;
             float rotationSkidThreshold = (skidThreshold * rotationSkidMultiplier) + (GetGrip() * rotationSkidMultiplier);
 
-            //Debug.Log("ST: " + skidThreshold + " / Cur Spd: " + (localVelo));
-            //Debug.Log("RST: " + rotationSkidThreshold + " / Cur Spd: " + Mathf.Abs(m_rb.angularVelocity.y));
 
             if (m_baseCarInfo.m_myDriveMode== CarInfo_s.driveMode_e.frontWheels)
             {
                 skidThreshold *= 0.45f;
-            }
-
-            //Removes the sideways spiderman effect
-            if(transform.up.y < 0.4)
-            {
-                //print("SS");
-                //m_rb.AddForce(transform.up * 10, ForceMode.Acceleration);
             }
 
             if(IsWheelSkidding(wheelIndex))
@@ -1779,26 +1655,6 @@ namespace Kojima
             ret = Physics.SphereCast(wheel.transform.position, m_baseCarInfo.m_wheelSize * 0.15f, -transform.up, out m_wheelRaycasts[index], m_baseCarInfo.m_wheelSize * 2, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore);
 
             Vector3 localNormal = transform.InverseTransformDirection(m_wheelRaycasts[index].normal);
-
-            //m_wheelInfos[index].m_steepValue = 1 - Mathf.Abs(m_wheelRaycasts[index].normal.y);
-            //m_wheelInfos[index].m_steepValue = Mathf.Clamp(-localNormal.z, 0, 10);
-            //stringForGizmoDebug = "Steepness: " + m_wheelInfos[index].m_steepValue + " due to a LN of " + localNormal;
-            //Debug.DrawLine(m_wheelRaycasts[index].point, m_wheelRaycasts[index].point + m_wheelRaycasts[index].normal * 10, Color.magenta);
-
-            //if (m_wheelInfos[index].m_steepValue>0.75f)
-            {
-                //Debug.Log("Floor too steep here");
-                
-            }
-
-            if (ret)
-            {
-                Debug.DrawLine(wheel.transform.position, m_wheelRaycasts[index].point, Color.red, 0.01f);
-            }
-            else
-            {
-                Debug.DrawLine(wheel.transform.position, wheel.transform.position - transform.up * m_baseCarInfo.m_wheelSize, Color.blue, 0.02f);
-            }
 
             if (ret && !previouslyGrounded)
             {

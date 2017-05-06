@@ -15,9 +15,9 @@ namespace Bam
 		{
 			m_infoCache = new WaterScript.WaveInfo();
 
-            if (m_waterBody == null && GameObject.Find("OceanPlane"))
+            if (m_waterBody == null && GameObject.Find("Water"))
             {
-                m_waterBody = GameObject.Find("OceanPlane").GetComponent<WaterScript>();
+                m_waterBody = GameObject.Find("Water").GetComponent<WaterScript>();
             }
 		}
 

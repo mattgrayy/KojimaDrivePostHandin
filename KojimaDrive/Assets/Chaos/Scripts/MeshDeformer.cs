@@ -33,10 +33,10 @@ public class MeshDeformer : MonoBehaviour
     [SerializeField] List<GameObject> ignoreObjects = new List<GameObject>();
 	[SerializeField] List<GameObject> lights =  new List<GameObject>();
 
-	List<DeformChunk> deformChunks = new List<DeformChunk> ();
+    List<DeformChunk> deformChunks = new List<DeformChunk> ();
 
-	Mesh m_deformingMesh;
-	Vector3[] m_originalVerticies;
+    Mesh baseMesh;
+    Mesh m_deformingMesh;
 	Vector3[] m_currentVerticies;
 
     [SerializeField] float m_fdmgMod = 1;
@@ -50,12 +50,14 @@ public class MeshDeformer : MonoBehaviour
 		//is this script is attached to a car or not
 		if (GetComponent<Kojima.CarScript> ())
         {
+            baseMesh = GetComponent<Kojima.CarScript>().GetCarBody().transform.FindChild("Body").GetComponent<MeshFilter>().sharedMesh;
             //it is a car
             m_deformingMesh = GetComponent<Kojima.CarScript> ().GetCarBody ().transform.FindChild("Body").GetComponent<MeshFilter> ().mesh;
         }
         else
         {
-			//it is somthing else
+            baseMesh = transform.GetComponent<MeshFilter>().sharedMesh;
+            //it is somthing else
             m_deformingMesh = transform.GetComponent<MeshFilter> ().mesh;
             if (GetComponent<MeshCollider>())
             {
@@ -63,7 +65,6 @@ public class MeshDeformer : MonoBehaviour
             }
 		}
 
-		m_originalVerticies = m_deformingMesh.vertices;
 		m_currentVerticies = m_deformingMesh.vertices;
 
 		ChunkSetUp ();
@@ -312,12 +313,27 @@ public class MeshDeformer : MonoBehaviour
 
                 if (deformChunks[closestChunkIndex].deformation < 100)
                 {
+                    // set the base modifiers for the deformation
+                    int prevVertChangeModX = Random.Range(-4, 4);
+                    int prevVertChangeModY = Random.Range(-4, 4);
+                    int prevVertChangeModZ = Random.Range(-4, 4);
+
                     foreach (int index in deformChunks[closestChunkIndex].vertexIndexes)
                     {
 						Vector3 changeValue = ((deformTarget - m_currentVerticies[index]) / 25) * m_fdmgMod;
 
-						if(Vector3.Distance(changeValue, m_currentVerticies[index]) <= 20)
+                        // clamp the value the can be deformed to avoid rare bugs
+						if(Vector3.Distance(changeValue, m_currentVerticies[index]) <= 3)
 						{
+                            // change the modievfiers slightly clamped ot values
+                            prevVertChangeModX = Mathf.Clamp(Random.Range(prevVertChangeModX - 2, prevVertChangeModX + 2), -4, 4);
+                            prevVertChangeModY = Mathf.Clamp(Random.Range(prevVertChangeModY - 2, prevVertChangeModY + 2), -4, 4);
+                            prevVertChangeModZ = Mathf.Clamp(Random.Range(prevVertChangeModZ - 2, prevVertChangeModZ + 2), -4, 4);
+
+                            changeValue = new Vector3((changeValue.x + ((changeValue.x / 10) * prevVertChangeModX)),
+                                                      (changeValue.y + ((changeValue.y / 10) * prevVertChangeModX)),
+                                                      (changeValue.z + ((changeValue.z / 10) * prevVertChangeModZ)));
+
 							m_currentVerticies [index] += changeValue;
 						}
                     }
@@ -348,26 +364,44 @@ public class MeshDeformer : MonoBehaviour
             changedMesh = true;
         }
 	}
-	/*
+	
 	public void resetDeformation()
 	{
-		m_deformingMesh.vertices = GetComponent<Kojima.CarScript> ().GetCarBody ().transform.FindChild("Body").GetComponent<MeshFilter> ().sharedMesh.vertices;
-		m_currentVerticies = m_deformingMesh.vertices;
-		m_deformingMesh.RecalculateNormals();
+        if (baseMesh != null)
+        {
+            // need new chunk calculations
+            deformChunks.Clear();
 
-		changedMesh = false;
+            // make a new mesh and set its vertices and sumbeshes (for materials) to match
+            Mesh newMesh = new Mesh();
 
-		for (int i = 0; i < deformChunks.Count; i++)
-		{
-			deformChunks [i].deformation = 0;
-		}
+            newMesh.vertices = baseMesh.vertices;
+            newMesh.subMeshCount = baseMesh.subMeshCount;
 
-		foreach (GameObject light in lights)
-		{
-			if(light != null && light.GetComponent<MeshRenderer>())
-			{
-				light.GetComponent<MeshRenderer>().enabled = true;
-			}
-		}
-	}*/
+            // this is needed to match the triangles that relate to each submesh's materials
+            for (int subMeshIndex = 0; subMeshIndex < newMesh.subMeshCount; subMeshIndex++)
+            {
+                newMesh.SetTriangles(baseMesh.GetTriangles(subMeshIndex), subMeshIndex);
+            }
+            // this makes the lighting work immediately
+            newMesh.RecalculateNormals();
+
+            // set up just like on start
+            GetComponent<Kojima.CarScript>().GetCarBody().transform.FindChild("Body").GetComponent<MeshFilter>().mesh = newMesh;
+
+            m_deformingMesh = GetComponent<Kojima.CarScript>().GetCarBody().transform.FindChild("Body").GetComponent<MeshFilter>().mesh;
+
+            m_currentVerticies = m_deformingMesh.vertices;
+            ChunkSetUp();
+
+            // reset the lights!
+            foreach (GameObject light in lights)
+            {
+                if (light != null && light.GetComponent<MeshRenderer>())
+                {
+                    light.GetComponent<MeshRenderer>().enabled = true;
+                }
+            }
+        }
+	}
 }

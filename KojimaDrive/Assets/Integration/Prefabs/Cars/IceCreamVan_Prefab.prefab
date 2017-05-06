@@ -1669,6 +1669,7 @@ MonoBehaviour:
   m_ftargetAngularDrag: 0
   splashPrefab: {fileID: 1000011416696478, guid: 8f0794fe4c8f0c741964288da0d655f6,
     type: 2}
+  m_nControllerID: 0
 --- !u!114 &114000010691573860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1918,7 +1919,10 @@ MonoBehaviour:
   - {fileID: 1000012086768416}
   - {fileID: 1000013217429142}
   - {fileID: 1000013217429142}
+  carType: 0
+  baseMesh: {fileID: 4300000, guid: bd9f1c9603a0a63409bc6796582fc6cd, type: 3}
   m_fdmgMod: 1
+  resetDeform: 0
 --- !u!114 &114000014137335004
 MonoBehaviour:
   m_ObjectHideFlags: 1

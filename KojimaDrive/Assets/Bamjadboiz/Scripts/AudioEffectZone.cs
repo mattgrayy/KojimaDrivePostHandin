@@ -9,16 +9,8 @@ namespace Bam
 	{
 		public AudioMixerGroup m_audioMixerGroup;
 		public int m_priority;
-		//public float m_radius;
 		public Collider m_collider;
 		
-
-		// Use this for initialization
-		void Start()
-		{
-			Debug.Assert(m_collider, "Audio effects must have a collider componenet");
-		}
-
 	
 		private void OnTriggerEnter(Collider other)
 		{

@@ -31,7 +31,6 @@ namespace Bam
 			m_stats = new Kojima.CarScript.CarInfo_s();
 			m_propertiesCache = new List<TerrainProperties.Properties_s>();
 			m_carScript = GetComponent<Kojima.CarScript>();
-			Debug.Assert(m_carScript, "[Yams] CarTerrainProperties requires component CarScript");
 		}
 
 		// Update is called once per frame

@@ -35,6 +35,7 @@ public class AddonManager : MonoBehaviour {
 
     private void setupPlayers()
     {
+        cars.Clear();
         int playerCount = Kojima.GameController.s_singleton.m_players.Length;
         for (int i = 0; i < playerCount; i++)
         {
@@ -50,50 +51,9 @@ public class AddonManager : MonoBehaviour {
         return cars;
     }
 
-    void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.U))
-		{
-            addObjectToCar(AddonType_e.GRAPPLE, cars[0]);
-		}
-		if(Input.GetKeyDown(KeyCode.I))
-		{
-			addObjectToCar(AddonType_e.GRAPPLE, cars[1]);
-		}
-		if(Input.GetKeyDown(KeyCode.O))
-		{
-			addObjectToCar(AddonType_e.GRAPPLE, cars[2]);
-		}
-		if(Input.GetKeyDown(KeyCode.P))
-		{
-			addObjectToCar(AddonType_e.GRAPPLE, cars[3]);
-		}
-
-		if(Input.GetKeyDown(KeyCode.H))
-		{
-			addObjectToCar(AddonType_e.CARAVAN, cars[0]);
-		}
-		if(Input.GetKeyDown(KeyCode.J))
-		{
-			addObjectToCar(AddonType_e.CARAVAN, cars[1]);
-		}
-		if(Input.GetKeyDown(KeyCode.K))
-		{
-			addObjectToCar(AddonType_e.CARAVAN, cars[2]);
-		}
-		if(Input.GetKeyDown(KeyCode.L))
-		{
-			addObjectToCar(AddonType_e.CARAVAN, cars[3]);
-		}
-
-		if(Input.GetKeyDown(KeyCode.G))
-		{
-			addObjectToCar (AddonType_e.GLIDER, cars [0]);
-		}
-	}
-
     public void addToAllCars(AddonType_e _Type)
     {
+        setupPlayers();
         foreach (Transform car in cars)
         {
             addObjectToCar(_Type, car);
@@ -102,7 +62,7 @@ public class AddonManager : MonoBehaviour {
 
     public void PickupConverter(int _AddonRef, int _CarRef, bool _Add)
     {
-
+        setupPlayers();
         AddonType_e n_Type = AddonType_e.NONE;
         switch (_AddonRef)
         {
@@ -187,7 +147,9 @@ public class AddonManager : MonoBehaviour {
 
 	public void destroyAllAddons()
 	{
-		foreach (Transform car in cars)
+        setupPlayers();
+
+        foreach (Transform car in cars)
 		{
 			destroyAddon (AddonType_e.CARAVAN, car);
 			destroyAddon (AddonType_e.GLIDER, car);
