@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Cro-RedShirts
+  m_Shader: {fileID: 4800000, guid: c5ac9335b1e915641b3f846d9dc0bd44, type: 3}
+  m_ShaderKeywords: GLOBAL_MULTIPLIER_OFF GLOW_ON HUESHIFT_ON OUTLINED_ON OUTLINED_ON2
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FillTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 86480c84facecd54fb77fcb477c750ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: eeb286c1c325ea840a1b79be4127f319, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BrightnessAmount
+      second: 0.35
+    - first:
+        name: _ContrastAmount
+      second: 0.1
+    - first:
+        name: _GlowEnd
+      second: 0.135
+    - first:
+        name: _GlowStart
+      second: 0.035
+    - first:
+        name: _HSVRangeMax
+      second: 1
+    - first:
+        name: _HSVRangeMin
+      second: 0
+    - first:
+        name: _OutlineThickness
+      second: 0.317
+    - first:
+        name: _OutlineThickness2
+      second: 0.1
+    - first:
+        name: _SaturateAmount
+      second: 0.21
+    - first:
+        name: _ShadowCutoff
+      second: 0.758
+    - first:
+        name: _Smoothness
+      second: 0.85
+    - first:
+        name: _Thickness
+      second: 0.579
+    m_Colors:
+    - first:
+        name: _GlobalMultiplierColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _GlowColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _HSVAAdjust
+      second: {r: 0.22, g: 0, b: 0, a: 0}
+    - first:
+        name: _OutlineColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _OutlineColor2
+      second: {r: 1, g: 1, b: 1, a: 1}

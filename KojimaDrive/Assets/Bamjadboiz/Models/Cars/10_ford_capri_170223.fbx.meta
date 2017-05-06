@@ -1,0 +1,108 @@
+fileFormatVersion: 2
+guid: 8fcddc1b5ccd00e45ab31898364b6352
+timeCreated: 1487845083
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: capri_body.001
+    100004: capri_wheel
+    100006: lights_brakes
+    100008: lights_headlights
+    100010: lights_indicator_L
+    100012: lights_indicator_R
+    100014: lights_reverse
+    400000: //RootNode
+    400002: capri_body.001
+    400004: capri_wheel
+    400006: lights_brakes
+    400008: lights_headlights
+    400010: lights_indicator_L
+    400012: lights_indicator_R
+    400014: lights_reverse
+    2300000: capri_body.001
+    2300002: capri_wheel
+    2300004: lights_brakes
+    2300006: lights_headlights
+    2300008: lights_indicator_L
+    2300010: lights_indicator_R
+    2300012: lights_reverse
+    3300000: capri_body.001
+    3300002: capri_wheel
+    3300004: lights_brakes
+    3300006: lights_headlights
+    3300008: lights_indicator_L
+    3300010: lights_indicator_R
+    3300012: lights_reverse
+    4300000: lights_reverse
+    4300002: lights_indicator_L
+    4300004: lights_indicator_R
+    4300006: lights_brakes
+    4300008: capri_body.001
+    4300010: lights_headlights
+    4300012: capri_wheel
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 156
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

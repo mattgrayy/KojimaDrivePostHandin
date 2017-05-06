@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 5ecdb934fa03f9845b31834c48d86bf8
+timeCreated: 1488549284
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_headlightPrefab: {fileID: 130488, guid: 4ef02fb9c87477c42ac9508f3b7b89a2, type: 2}
+  - m_breaklightPrefab: {fileID: 160330, guid: 7e3643c4e3f98ea48b6f5b9d00ea98b7, type: 2}
+  - m_reverselightPrefab: {fileID: 118128, guid: 28b97b332aba2e24c92e6acaa386fabd,
+      type: 2}
+  - m_hazardlightPrefab: {fileID: -1410731816, guid: 89a1221ad8a1c7f42ae8a5bc1c0a8f4c,
+      type: 2}
+  - m_taillightPrefab: {fileID: 1000013259524470, guid: e2ca938eb9322c64291eae4558f882a3,
+      type: 2}
+  - m_headlights: {instanceID: 0}
+  - m_breaklights: {instanceID: 0}
+  - m_reverselights: {instanceID: 0}
+  - m_hazardlightsleft: {instanceID: 0}
+  - m_hazardlightsright: {instanceID: 0}
+  - m_foglights: {instanceID: 0}
+  - m_taillights: {instanceID: 0}
+  - m_headlightsOFF: {fileID: 2100000, guid: 8c575faa59fb7ef4a885f139a30bd618, type: 2}
+  - m_headlightsON: {fileID: 2100000, guid: 64132186c3808234582a88e84b6bbc59, type: 2}
+  - m_reverselightsOFF: {fileID: 2100000, guid: d9ffe7e8cdecc5940a345f635c4532f3,
+      type: 2}
+  - m_reverselightsON: {fileID: 2100000, guid: c103fb00e62df3f458d5683bb9ea8470, type: 2}
+  - m_breaklightsOFF: {fileID: 2100000, guid: fd0bba769df519843a0f342da9e01f7d, type: 2}
+  - m_breaklightsON: {fileID: 2100000, guid: cff2f806e39362342b769774f575b283, type: 2}
+  - m_hazardsOFF: {fileID: 2100000, guid: f17bfa5b5948f7f4dbe31711af75617e, type: 2}
+  - m_hazardsON: {fileID: 2100000, guid: 7989dd6280858594b9da1b4e05601449, type: 2}
+  - m_taillightsOFF: {fileID: 2100000, guid: ea7d08d4d47abc7498a2c9438eb1c07e, type: 2}
+  - m_taillightsON: {fileID: 2100000, guid: 6edde33608a7c5b40899cdd0f62f7ea2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

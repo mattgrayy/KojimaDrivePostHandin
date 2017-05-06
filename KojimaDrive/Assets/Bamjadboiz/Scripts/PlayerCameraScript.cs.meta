@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 134ca7fd1da980b4fbd6fd5adf7f0452
+timeCreated: 1493828121
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_PostFXCamera: {instanceID: 0}
+  - m_mainPlayer: {instanceID: 0}
+  - m_OHeadCanvasPrefab: {fileID: 1000011916583774, guid: 0fd0088af41deb049973eadd26dcee54,
+      type: 2}
+  - myCanvasPrefab: {instanceID: 0}
+  - myTransitionScript: {instanceID: 0}
+  - speedBlur: {instanceID: 0}
+  - saturation: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

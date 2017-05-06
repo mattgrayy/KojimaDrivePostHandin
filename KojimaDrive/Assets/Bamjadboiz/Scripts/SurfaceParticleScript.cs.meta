@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: facb36b1192f7ef4a9a69359b3e2c10c
+timeCreated: 1491917043
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_grassPrefab: {fileID: 1000011702816140, guid: 2165bf537403753439346eb38aeb9e89,
+      type: 2}
+  - m_rockPrefab: {fileID: 1000012708471798, guid: 0601bbc814de5ae488f2b0f7989e2131,
+      type: 2}
+  - m_sandPrefab: {fileID: 1000010195885706, guid: 64a93b8cd61a5804590e69084c6e9ef8,
+      type: 2}
+  - m_grassClip: {fileID: 8300000, guid: 9e45fa90296508048b960db1317c039a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

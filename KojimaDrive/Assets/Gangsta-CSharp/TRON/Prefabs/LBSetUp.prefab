@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000012760682046}
+  m_IsPrefabParent: 1
+--- !u!1 &1000012760682046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011570280068}
+  - 114: {fileID: 114000011296310694}
+  - 114: {fileID: 114000013905115794}
+  - 114: {fileID: 114000012108574802}
+  m_Layer: 0
+  m_Name: LBSetUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011570280068
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012760682046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -191.93, y: 30.86, z: 656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000011296310694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012760682046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fef6e2a39d1774faf1d0b6b6fc97d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lbSpawnPointPref: {fileID: 1000010564484430, guid: e57cb81de07ccd049a2d240d290dbc12,
+    type: 2}
+  m_lbCollBoxPref: {fileID: 1000010091191746, guid: 97817897cf104fb4f9595a4352963a32,
+    type: 2}
+  m_spawnTime: 0.3
+  m_cooldownTime: 5
+  m_offset: -3
+  m_spawnLimit: 20
+  m_lbMats:
+  - {fileID: 2100000, guid: 7f32a7fc39eabc444ac4a2c931cefc1b, type: 2}
+  - {fileID: 2100000, guid: e88be8e65bf3b8442a33d6c415e962d0, type: 2}
+  - {fileID: 2100000, guid: 2552a0663c88abd45906bb2619007500, type: 2}
+  - {fileID: 2100000, guid: 5c8dbe3a17152a04c9fb373b54cdf491, type: 2}
+  m_arrowPref: {fileID: 1000011731796556, guid: 23dc50b438d727e46814c0289d9dec04,
+    type: 2}
+  m_playerArrows: []
+  m_colourCount: 0
+--- !u!114 &114000012108574802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012760682046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2dbbd8c7804746a3249d7d38d4b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000013905115794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012760682046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668613770aaa5314fbf3b2792dcc10fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_modeWidth: 0
+  m_modeHeight: 0
+  m_mode: 10
+  m_numberOfPlayers: 0
+  m_playerScores: 
+  m_winningScore: 3
+  m_resetModelsOnEnd: 1
+  m_startingModels: []
+  m_lockCarChanges: 0
+  m_teams: []
+  m_spawns:
+  - m_name: 
+    m_transform: {fileID: 0}
+    m_inUse: 1
+  - m_name: 
+    m_transform: {fileID: 0}
+    m_inUse: 1
+  - m_name: 
+    m_transform: {fileID: 0}
+    m_inUse: 1
+  - m_name: 
+    m_transform: {fileID: 0}
+    m_inUse: 1
+  m_phases: []
+  m_currentPhase:
+    m_phaseName: 
+    m_nextPhase: 
+    m_previousPhase: 
+    m_length: 0
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  m_timerObject: {fileID: 0}
+  m_CustomLoadTransition: {fileID: 0}
+  m_bDisplayTextIntro: 1
+  m_strEventName: 
+  m_strEventByline: 
+  m_testing: 1
+  m_levelName: LB GM 2
+  m_rounds: 3
+  m_car: 7

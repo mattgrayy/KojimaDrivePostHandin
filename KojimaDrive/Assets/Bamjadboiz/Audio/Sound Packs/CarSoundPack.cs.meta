@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8ad32cc16513a5d4997405a3ecdc47c7
+timeCreated: 1492956688
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - engine: {instanceID: 0}
+  - acceleration: {instanceID: 0}
+  - smallImpact: {instanceID: 0}
+  - largeImpact: {instanceID: 0}
+  - skidding: {instanceID: 0}
+  - landing: {instanceID: 0}
+  - horn: {instanceID: 0}
+  - pedalSound: {fileID: 8300000, guid: ab827c4cd3bbfcd438f1d5b6c477d254, type: 3}
+  - gearChangeSound: {fileID: 8300000, guid: 341c2da6a222f084fa0343067dfb29d4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

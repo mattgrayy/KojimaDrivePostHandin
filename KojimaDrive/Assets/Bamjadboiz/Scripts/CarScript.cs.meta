@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b4d4863f247882c4f87d105b16c3ac68
+timeCreated: 1491661622
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_carBody: {instanceID: 0}
+  - m_wheelLandParticlePrefab: {instanceID: 0}
+  - grappleOnMe: {instanceID: 0}
+  - myGrapple: {instanceID: 0}
+  - splashPrefab: {fileID: 1000012347701396, guid: 8f0794fe4c8f0c741964288da0d655f6,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

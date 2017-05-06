@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000011600141206}
+  m_IsPrefabParent: 1
+--- !u!1 &1000011600141206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011443748888}
+  - 114: {fileID: 114000013695352626}
+  m_Layer: 0
+  m_Name: PlayerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011443748888
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011600141206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5576863, y: 0.72444147, z: 24.778229}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000013695352626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011600141206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028472a195da1544d9f77f273de542c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SpawnPositionsK:
+  - m_spawnPosition:
+    - {x: 432.35, y: 3.36, z: 222.67}
+    - {x: 439.35, y: 3.48, z: 203.59}
+    - {x: 438.8, y: 3.15, z: 210.56}
+    - {x: 435.4, y: 3.57, z: 217.05}
+    m_spawnOrientation:
+    - {x: 0, y: 84.134, z: 0}
+    - {x: 0, y: 45.535, z: 0}
+    - {x: 0, y: 51.686, z: 0}
+    - {x: 0, y: 68.96101, z: 0}
+  - m_spawnPosition:
+    - {x: -427.4954, y: 10.91, z: -517.812}
+    - {x: -421.571, y: 11.01, z: -498.4496}
+    - {x: -425.807, y: 10.61, z: -504.0227}
+    - {x: -426.2528, y: 11.11, z: -511.22}
+    m_spawnOrientation:
+    - {x: 0, y: -58.732, z: 0}
+    - {x: 0, y: -97.21001, z: 0}
+    - {x: 0, y: -90.785, z: 0}
+    - {x: 0, y: -74.375, z: 0}
+  - m_spawnPosition:
+    - {x: -511.02, y: 8.35, z: 560.52}
+    - {x: -530.91, y: 8.45, z: 559.51}
+    - {x: -524.48, y: 8.05, z: 556.57}
+    - {x: -517.92, y: 8.55, z: 559.02}
+    m_spawnOrientation:
+    - {x: 0, y: -169.519, z: 0}
+    - {x: 0, y: -207.797, z: 0}
+    - {x: 0, y: -201, z: 0}
+    - {x: 0, y: -184.39, z: 0}
+  m_BackupPlayerSpawnerK: {fileID: 1000010900115958, guid: 7c802147438450d4691027cca3843378,
+    type: 2}
+  m_TransitionPositionK:
+    m_spawnPosition:
+    - {x: 451.44, y: 3.181436, z: 231.77}
+    - {x: 456.57, y: 3.57259, z: 232.53}
+    - {x: 446.68, y: 2.839044, z: 231.42}
+    - {x: 441.49, y: 2.582193, z: 231.33}
+    m_spawnOrientation:
+    - {x: 0, y: 171.633, z: 0}
+    - {x: 0, y: 143.679, z: 0}
+    - {x: 0, y: 171.633, z: 0}
+    - {x: 0, y: 200.034, z: 0}
+  m_SpawnPositionsO:
+  - m_spawnPosition:
+    - {x: -1340.932, y: 27.91, z: 3064.865}
+    - {x: -1352.069, y: 27.91, z: 3058.159}
+    - {x: -1345.731, y: 27.91, z: 3063.143}
+    - {x: -1349.157, y: 27.91, z: 3061.079}
+    m_spawnOrientation:
+    - {x: 0, y: 180.592, z: 0}
+    - {x: 0, y: 124.136, z: 0}
+    - {x: 0, y: 159.432, z: 0}
+    - {x: 0, y: 135.814, z: 0}
+  - m_spawnPosition:
+    - {x: 3495.71, y: 23.7, z: -416.74}
+    - {x: 3483.58, y: 23.7, z: -421.53}
+    - {x: 3490.61, y: 23.7, z: -416.78}
+    - {x: 3487.09, y: 23.7, z: -419.15}
+    m_spawnOrientation:
+    - {x: 0, y: 186.443, z: 0}
+    - {x: 0, y: 130.223, z: 0}
+    - {x: 0, y: 165.485, z: 0}
+    - {x: 0, y: 141.434, z: 0}
+  - m_spawnPosition:
+    - {x: -526.84, y: 330.83, z: -2190.32}
+    - {x: -528.83, y: 330.83, z: -2182.79}
+    - {x: -530.8, y: 330.83, z: -2176.2}
+    - {x: -532.43, y: 330.83, z: -2169.18}
+    m_spawnOrientation:
+    - {x: 0, y: 74.09801, z: 0}
+    - {x: 0, y: 74.09801, z: 0}
+    - {x: 0, y: 74.09801, z: 0}
+    - {x: 0, y: 74.09801, z: 0}
+  - m_spawnPosition:
+    - {x: -531.82, y: 446.43, z: -2729.83}
+    - {x: -526.82, y: 446.43, z: -2740.83}
+    - {x: -530.82, y: 446.43, z: -2734.83}
+    - {x: -528.82, y: 446.43, z: -2737.83}
+    m_spawnOrientation:
+    - {x: 0, y: 91.80901, z: 0}
+    - {x: 0, y: 35.43, z: 0}
+    - {x: 0, y: 70.704, z: 0}
+    - {x: 0, y: 46.896, z: 0}
+  - m_spawnPosition:
+    - {x: -909.9, y: 312.38, z: -237.1}
+    - {x: -921.9, y: 312.38, z: -238.9}
+    - {x: -915, y: 312.38, z: -236.7}
+    - {x: -918.5, y: 312.38, z: -237.8}
+    m_spawnOrientation:
+    - {x: 0, y: 197.349, z: 0}
+    - {x: 0, y: 140.74, z: 0}
+    - {x: 0, y: 176.316, z: 0}
+    - {x: 0, y: 152.824, z: 0}
+  - m_spawnPosition:
+    - {x: -1026.07, y: 311.29, z: -451.72}
+    - {x: -1016.94, y: 311.29, z: -443.73}
+    - {x: -1021.56, y: 311.29, z: -449.3}
+    - {x: -1019.21, y: 311.29, z: -446.49}
+    m_spawnOrientation:
+    - {x: 0, y: 345.291, z: 0}
+    - {x: 0, y: 288.031, z: 0}
+    - {x: 0, y: 323.286, z: 0}
+    - {x: 0, y: 300.078, z: 0}
+  - m_spawnPosition:
+    - {x: 2085.84, y: 700.5, z: -166.44}
+    - {x: 2090.84, y: 700.5, z: -155.44}
+    - {x: 2088.74, y: 700.5, z: -162.94}
+    - {x: 2089.34, y: 700.5, z: -159.44}
+    m_spawnOrientation:
+    - {x: 0, y: 320.573, z: 0}
+    - {x: 0, y: 264.35, z: 0}
+    - {x: 0, y: 299.379, z: 0}
+    - {x: 0, y: 275.748, z: 0}
+  m_BackupPlayerSpawnerO: {fileID: 1000010900115958, guid: 4af963febddd41d4ba2acb5f93fbb75f,
+    type: 2}
+  m_TransitionPositionO:
+    m_spawnPosition:
+    - {x: -1456.7, y: 15.36, z: 2146.9}
+    - {x: -1460.7, y: 15.11, z: 2147.3}
+    - {x: -1463.7, y: 15.2, z: 2150.3}
+    - {x: -1465.9, y: 15.42, z: 2153.8}
+    m_spawnOrientation:
+    - {x: 0, y: -165.942, z: 0}
+    - {x: 0, y: -142.552, z: 0}
+    - {x: 0, y: -132.203, z: 0}
+    - {x: 0, y: -109.783, z: 0}

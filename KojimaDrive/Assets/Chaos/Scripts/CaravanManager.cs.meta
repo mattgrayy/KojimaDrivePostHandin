@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ed989fffa91e36b4aafa5f08d08561a1
+timeCreated: 1488373862
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - caravan: {fileID: 466518, guid: d0df6c9fb3a1a454e905615071fd42df, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

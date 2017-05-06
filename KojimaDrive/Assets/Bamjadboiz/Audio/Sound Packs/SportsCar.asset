@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad32cc16513a5d4997405a3ecdc47c7, type: 3}
+  m_Name: SportsCar
+  m_EditorClassIdentifier: 
+  engine: {fileID: 8300000, guid: 51dce2fde3f6539409efa120b76138f9, type: 3}
+  acceleration: {fileID: 8300000, guid: de5a9f20ebd1c0a438ab44e9931bc65b, type: 3}
+  smallImpact: {fileID: 8300000, guid: cf25b1f78b333cf4a939de460fd346d6, type: 3}
+  largeImpact: {fileID: 8300000, guid: 93d1bdf49a3a70b4283d8b0a1ba1e144, type: 3}
+  skidding: {fileID: 8300000, guid: bc8fa2fe78389f14e84018fc050af975, type: 3}
+  landing: {fileID: 8300000, guid: 5b3aa3e0e9e39584cbcb13cbcd7da598, type: 3}
+  horn: {fileID: 8300000, guid: 7de8bb65ab69bf443b24f9e740387b19, type: 3}
+  pedalSound: {fileID: 8300000, guid: ab827c4cd3bbfcd438f1d5b6c477d254, type: 3}
+  gearChangeSound: {fileID: 8300000, guid: 341c2da6a222f084fa0343067dfb29d4, type: 3}
+  swoosh: {fileID: 8300000, guid: 0c62085bc665dcb4ab3fd3086a9824c9, type: 3}

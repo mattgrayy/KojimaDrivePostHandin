@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: 564487644408d8548a2e0a9aaf0fce09
+timeCreated: 1487776621
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: cavalier_calibre_brakelights
+    100004: cavalier_calibre_headlights
+    100006: cavalier_calibre_mistlights
+    100008: cavalier_calibre_reverselights
+    100010: cavalier_calibre_wheel
+    100012: Lotus-carlton_indicator_L
+    100014: Lotus-carlton_indicator_R
+    400000: //RootNode
+    400002: cavalier_calibre_brakelights
+    400004: cavalier_calibre_headlights
+    400006: cavalier_calibre_mistlights
+    400008: cavalier_calibre_reverselights
+    400010: cavalier_calibre_wheel
+    400012: Lotus-carlton_indicator_L
+    400014: Lotus-carlton_indicator_R
+    2300000: //RootNode
+    2300002: cavalier_calibre_brakelights
+    2300004: cavalier_calibre_headlights
+    2300006: cavalier_calibre_mistlights
+    2300008: cavalier_calibre_reverselights
+    2300010: cavalier_calibre_wheel
+    2300012: Lotus-carlton_indicator_L
+    2300014: Lotus-carlton_indicator_R
+    3300000: //RootNode
+    3300002: cavalier_calibre_brakelights
+    3300004: cavalier_calibre_headlights
+    3300006: cavalier_calibre_mistlights
+    3300008: cavalier_calibre_reverselights
+    3300010: cavalier_calibre_wheel
+    3300012: Lotus-carlton_indicator_L
+    3300014: Lotus-carlton_indicator_R
+    4300000: cavalier_calibre_body
+    4300002: cavalier_calibre_mistlights
+    4300004: cavalier_calibre_brakelights
+    4300006: cavalier_calibre_reverselights
+    4300008: Lotus-carlton_indicator_R
+    4300010: Lotus-carlton_indicator_L
+    4300012: cavalier_calibre_wheel
+    4300014: cavalier_calibre_headlights
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 156
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 240dd6f78edac6f43b7a5e693970f6b5
+timeCreated: 1485356954
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_oilReference: {fileID: 114564, guid: f7708108173585142a4e60787fa7be17, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

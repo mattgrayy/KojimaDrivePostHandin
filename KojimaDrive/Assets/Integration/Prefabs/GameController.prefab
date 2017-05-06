@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &189988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467214}
+  - 114: {fileID: 11441260}
+  - 114: {fileID: 114000013594183930}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467214
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189988}
+  m_LocalRotation: {x: -0.00073025393, y: 0.7349438, z: 0.0007914379, w: 0.67812717}
+  m_LocalPosition: {x: 321.04514, y: 23.459324, z: -106.86853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11441260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04f4401a84b5641a98c479f9a5ba45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_eIsland: 0
+  m_players: []
+  createTheseOnAwake:
+  - {fileID: 1000013515731990, guid: 7218d073afa0b2e4f9b3b6a4d530fbfd, type: 2}
+  - {fileID: 1000011600141206, guid: 21250089b881ff743911d856ea1993df, type: 2}
+  - {fileID: 144026, guid: 16d0e90b78ff95840a185f0c64a3899b, type: 2}
+  - {fileID: 172244, guid: d512c63cafe2a004ea603eb59f8474bf, type: 2}
+  - {fileID: 1000011125124580, guid: f4782d482dba52846a8881b88c442285, type: 2}
+  - {fileID: 113460, guid: 279d477bb5966b542aff8a19eb955b8b, type: 2}
+  - {fileID: 138292, guid: fadde774a4344f243bbe10886a93b150, type: 2}
+  - {fileID: 1000011843419026, guid: e84803f088fdbbd4f96a4f141e96092d, type: 2}
+  - {fileID: 173840, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+  - {fileID: 153318, guid: 8efa7f3217fc6364d86be1eefaa062c7, type: 2}
+  - {fileID: -1474032638, guid: e0e097e67e2495749ad284b1395a12fe, type: 2}
+  - {fileID: 1000013410883730, guid: 5cf204c3c90c25241bcc4a9e5e991310, type: 2}
+  - {fileID: 1000011767543264, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+  - {fileID: 1000012414069230, guid: 6f0714a99d9bfc24f88c7dee7be0ee03, type: 2}
+  - {fileID: 1000013902186624, guid: 7ef0bc34e01cf96479ca23a19195482d, type: 2}
+  - {fileID: 1000011249854738, guid: 360ef909e6daf9c438f0beab3acccf86, type: 2}
+  - {fileID: 1000013075812818, guid: a4af71002dd12a4429ee5d711968b64a, type: 2}
+  - {fileID: 1000013191281108, guid: 8d51fe3844af30b469a916da25eed7d4, type: 2}
+  - {fileID: 1000010171751216, guid: 7ef41ce2e68fb8f46890d71134d4f8c2, type: 2}
+  resultsScreenPrefab: {fileID: 1000013272034728, guid: 24dd9a73c12723148a9c9285665f6bd9,
+    type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 189988}
+  m_IsPrefabParent: 1
+--- !u!114 &114000013594183930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1893c0bae7bb24db4a6ff3c9292ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grass: {fileID: 1000011702816140, guid: 2165bf537403753439346eb38aeb9e89, type: 2}
+  sand: {fileID: 1000010195885706, guid: 64a93b8cd61a5804590e69084c6e9ef8, type: 2}
+  rock: {fileID: 1000012708471798, guid: 0601bbc814de5ae488f2b0f7989e2131, type: 2}
+  grassSnd: {fileID: 8300000, guid: 9e45fa90296508048b960db1317c039a, type: 3}
+  impact1: {fileID: 1000013448363730, guid: 83c5bf2ff8383fe4f8e3757dc3b3da7f, type: 2}
+  explosion1: {fileID: 1000012454987646, guid: 21ec466bb336e104c85e95d94c3e3f8e, type: 2}

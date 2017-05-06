@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013515731990}
+  m_IsPrefabParent: 1
+--- !u!1 &1000013515731990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011469307442}
+  - 114: {fileID: 114000010660158160}
+  m_Layer: 0
+  m_Name: CarSwapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011469307442
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013515731990}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 134.1, y: 22.69, z: 103}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000010660158160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013515731990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d04c2fdb0030b46869c1140120b821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_carPrefab:
+  - {fileID: 168898, guid: c8f789edc9ea2b94a895724776ccd95e, type: 2}
+  - {fileID: 117024, guid: 2e535448bce991c41b321ef74273e58d, type: 2}
+  - {fileID: 181286, guid: cf317e8f5782da846b5f6c5e6888b161, type: 2}
+  - {fileID: 194850, guid: 25a89ada86092a544964fbf60aeacf28, type: 2}
+  - {fileID: 1000011358282908, guid: 30e7c307430f5194d9bab7e356e89b56, type: 2}
+  - {fileID: 1000012745549748, guid: b0d875e419eb7b44284fb968a833cebd, type: 2}
+  - {fileID: 1000011876461624, guid: 2b3b8ed912ca9364fbdd06aedb84bccf, type: 2}
+  - {fileID: 1000011972216982, guid: 0fea033230426f049b6054e808272b68, type: 2}
+  - {fileID: 1000012770637282, guid: 23eb201eaeea46244b411495a2446581, type: 2}
+  - {fileID: 1000012344609028, guid: 1007138be9db33b4bb5e2a2fd7e2c181, type: 2}
+  - {fileID: 1000013121894722, guid: 1d77de1f9635bf0438f197d0bf0c4413, type: 2}

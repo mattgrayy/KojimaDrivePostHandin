@@ -1,0 +1,559 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000010890903070}
+  m_IsPrefabParent: 1
+--- !u!1 &1000010890903070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012996863808}
+  - 114: {fileID: 114000013090450048}
+  m_Layer: 0
+  m_Name: Transition_Lobby_In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000012996863808
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010890903070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -210.03706, y: -44.105732, z: 336.33368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000013090450048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010890903070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf9d5d4b1b96544cb88b0cb994841bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bLockInputWhileRunning: 1
+  m_bLockPlayerInputWhileRunning: 1
+  m_strTransitionChannel: GENERIC
+  m_bInterruptTransitionOnDestroy: 0
+  m_bFireKJDEvents: 1
+  m_bCustomKJDCompletionEvent: 0
+  m_eCustomCompletionEvent: 0
+  m_UIEventListeners:
+  - {fileID: 0}
+  m_bInterruptTransitionDuringOverride: 0
+  m_strTargetPostFXStack: TransitionFX
+  m_fTransitionTime: 0.7
+  m_fTransitionProgress: 0
+  m_TargetPostFXObjects:
+  - m_strPostFXStackMember: Cutoff
+    m_PostFXStackMember: {fileID: 0}
+    m_StartState: []
+    m_nStartPasses: 0
+    m_EndState:
+    - m_Name: _TransitionTex
+      m_PrettyName: Transition Tex
+      m_Type: 4
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 2800000, guid: 0426727dbbb1d954d8ad0100ac628a3c, type: 3}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color
+      m_PrettyName: Color
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color2
+      m_PrettyName: Color 2
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color3
+      m_PrettyName: Color 3
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Cutoff
+      m_PrettyName: Cutoff
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 10
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1.2566372
+          inSlope: -1.2566372
+          outSlope: -1.2566372
+          tangentMode: 10
+        - time: 1
+          value: 0
+          inSlope: -1.2566372
+          outSlope: -1.2566372
+          tangentMode: 10
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 1
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffFade
+      m_PrettyName: Cutoff Fade
+      m_Type: 3
+      m_fVal: 0.1
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffMiddle
+      m_PrettyName: Cutoff Middle
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffInner
+      m_PrettyName: Cutoff Inner
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Distort
+      m_PrettyName: Distort
+      m_Type: 2
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Fade
+      m_PrettyName: Fade
+      m_Type: 3
+      m_fVal: 1
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    m_nEndPasses: 0
+    m_bAlterPasses: 0
+    m_bLerpPasses: 0
+    m_bCurvePasses: 0
+    m_PassesCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_bEnablePFXO: 1
+    m_bAlterPFXO: 1
+    m_strLastValidName: Cutoff
+  - m_strPostFXStackMember: BoxBlur
+    m_PostFXStackMember: {fileID: 0}
+    m_StartState: []
+    m_nStartPasses: 0
+    m_EndState:
+    - m_Name: _MaskTexture
+      m_PrettyName: Mask Texture
+      m_Type: 4
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    m_nEndPasses: 0
+    m_bAlterPasses: 1
+    m_bLerpPasses: 0
+    m_bCurvePasses: 1
+    m_PassesCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 10.265488
+        inSlope: -10.265488
+        outSlope: -10.265488
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: -10.265488
+        outSlope: -10.265488
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_bEnablePFXO: 1
+    m_bAlterPFXO: 1
+    m_strLastValidName: BoxBlur
+  m_fLerpState: 0
+  m_bTransitionOnStart: 1
+  m_bDestroySelfOnCompletion: 0
+  m_bDestroyGOOnCompletion: 0
+  m_bRevertToInitialValuesOnCompletion: 0
+  m_bPlayInReverse: 0
+  m_bUseUnscaledTime: 0

@@ -1,0 +1,47 @@
+REWIND SYSTEM BY LOUCA COLES (Built in Unity 5.3.4f1)
+
+Firstly thanks for downloading this rewind system!
+This system can be used as a basic rewind system and comes with some pre-built scripts that can used to quicky set up the system and get basic rewinds working. From these pre-built scripts you will be able to rewind an objects position, rotation, animations and materials. As well as being able to rewind audio.
+
+As well as pre-built scripts this project also includes example scenes so you can see it working and how to set it up.
+
+SETUP
+In order to use this system you will need an empty gameobject which contains the rewind manager script. With this script you can drag all objects that you wish to rewind into its list, as well as set up how long the system rewinds for, how much data is recorded, see which state it is in and a text object which you can use to visually show what state the system is in without checking the object.
+
+You will also need a reference to the gameobject that will be playing the background audio, this will be placed with all the other rewindable objects.
+
+Then once this is set up you will need to set up all objects that will be rewound. Each object will always need a rewindable script, record script and rewind script attached to it. After that just attached any of the components scripts to that object to get a specific rewind effect.
+
+SYSTEM SCRIPTS
+Here are a list of scripts specific to the rewind system besides the component scripts:
+- RewindManager.cs
+- Rewindable.cs
+- Record.cs
+- Rewind.cs
+
+COMPONENT SCRIPTS
+Here are a list of component scripts that are ready to use:
+- PositionComponent.cs
+- RotationComponent.cs
+- AnimationComponent.cs
+- MaterialComponent.cs
+- BackgroundAudioComponent.cs
+
+MISC SCRIPTS
+Here are a few scripts left in to allow specific examples to work, for example movement and material changing.
+- MaterialChanger.cs
+- TestMovement.cs
+
+EXPLANATION OF SCRIPTS
+Rewindable script - This script it used to communicate between scripts, allowing other scripts to see which components are attached and allowing them to call specific functions. It is alos used to reset the components data.
+
+Record script -  This script will check what components are attached and get each one to record data. It also allows you to pass a float value to each component, this float is the time between each piece of data is recorded. For example if it was set to 0.5 it would record data every 0.5 seconds.
+
+Rewind script - This script is similar to the record script as it will check which components are attached and rewind the data. It also allows you to pass the rate of change for the transitions, So how quick it gets from one position to the next. It will also reset any components dirty flags.
+
+Component Scripts - These scripts are used to control the specific type of recording/rewinding. They contain a variety of functions to help carry out specific tasks.
+
+CREATING YOUR OWN COMPONENT SCRIPTS
+Should there not be a component that is already built, it is possible to add your own. For the component scripts themselves I highly suggest looking at the pre-built ones and see how they are set up. From after they have been coded up, the rewindable, record and rewind script will need to be modified to work with the new components scripts.
+
+The rewindable script will need a reference to the component as well as a bool so the other scripts can check if its attached to that object. All three of the scripts will need to call various functions but have the pre-built ones set up so you can find where and what functions need to be called from them.

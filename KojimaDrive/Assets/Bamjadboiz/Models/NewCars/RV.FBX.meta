@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 6938192fbe705f3479f2b50576350f8e
+timeCreated: 1492779691
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: LMC_body
+    100002: LMC_brakes
+    100004: LMC_reverselights
+    100006: //RootNode
+    100008: RV
+    100010: rv_lights.001
+    100012: rv_lights.brakes
+    100014: rv_lights.indicator_L
+    100016: rv_lights.indicator_R
+    100018: wheel_default_2
+    100020: wheel_default_2.001
+    100022: wheel_default_2.002
+    100024: wheel_default_2.003
+    400000: LMC_body
+    400002: LMC_brakes
+    400004: LMC_reverselights
+    400006: //RootNode
+    400008: RV
+    400010: rv_lights.001
+    400012: rv_lights.brakes
+    400014: rv_lights.indicator_L
+    400016: rv_lights.indicator_R
+    400018: wheel_default_2
+    400020: wheel_default_2.001
+    400022: wheel_default_2.002
+    400024: wheel_default_2.003
+    2300000: LMC_brakes
+    2300002: LMC_reverselights
+    2300004: RV
+    2300006: rv_lights.001
+    2300008: rv_lights.brakes
+    2300010: rv_lights.indicator_L
+    2300012: rv_lights.indicator_R
+    2300014: wheel_default_2
+    2300016: wheel_default_2.001
+    2300018: wheel_default_2.002
+    2300020: wheel_default_2.003
+    3300000: LMC_brakes
+    3300002: LMC_reverselights
+    3300004: RV
+    3300006: rv_lights.001
+    3300008: rv_lights.brakes
+    3300010: rv_lights.indicator_L
+    3300012: rv_lights.indicator_R
+    3300014: wheel_default_2
+    3300016: wheel_default_2.001
+    3300018: wheel_default_2.002
+    3300020: wheel_default_2.003
+    4300000: LMC_reverselights
+    4300002: LMC_brakes
+    4300004: RV
+    4300006: rv_lights.brakes
+    4300008: rv_lights.001
+    4300010: rv_lights.indicator_R
+    4300012: rv_lights.indicator_L
+    4300014: wheel_default_2.003
+    4300016: wheel_default_2.002
+    4300018: wheel_default_2.001
+    4300020: wheel_default_2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

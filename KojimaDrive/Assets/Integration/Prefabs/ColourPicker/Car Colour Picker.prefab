@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000012572032574}
+  m_IsPrefabParent: 1
+--- !u!1 &1000012572032574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011423835402}
+  - 114: {fileID: 114000010380567998}
+  - 135: {fileID: 135000013502322988}
+  m_Layer: 0
+  m_Name: Car Colour Picker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011423835402
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012572032574}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 61.7, y: 19.31, z: 37.068344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000010380567998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012572032574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba507a05360cc747a5a05d095e26075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colour: 0
+  m_matIDs: 
+  m_players: []
+  player: {fileID: 0}
+  m_initMat: {fileID: 0}
+  m_newMat: {fileID: 2100000, guid: f031626da7fa5944589c73414d56e3d4, type: 2}
+  ColourList:
+  - {fileID: 2100000, guid: 5f2592f44b4ad5445bc9ff7747282042, type: 2}
+  - {fileID: 2100000, guid: 84cdde53deb74074cb2c1b4790367c9b, type: 2}
+  - {fileID: 2100000, guid: 26e1ea35069060e4692811ed4805c172, type: 2}
+  - {fileID: 2100000, guid: d106b0ca95744a3419a83214cadb4bc0, type: 2}
+  - {fileID: 2100000, guid: fcbae2cd9724da941b34b64ced2a808e, type: 2}
+  - {fileID: 2100000, guid: 4713e515d6e3f7340b14b9d2d415879e, type: 2}
+  - {fileID: 2100000, guid: ebbde550651315741830a6db5272b98c, type: 2}
+  - {fileID: 2100000, guid: ee9154419f99f134e83a040030b8e5bc, type: 2}
+  - {fileID: 2100000, guid: 86dec3baf71d4314da2488c0fc11f613, type: 2}
+  - {fileID: 2100000, guid: 0362e2c21ffcc0947bfd2809e6cd8260, type: 2}
+  - {fileID: 2100000, guid: 8a724a24bbf71164fa0de4a0e50faaa1, type: 2}
+  - {fileID: 2100000, guid: f031626da7fa5944589c73414d56e3d4, type: 2}
+  selectedColour: 11
+  colourWheelPrefab: {fileID: 1000011534777756, guid: 6d20a80f17e96884a85d9edbf90d700f,
+    type: 2}
+--- !u!135 &135000013502322988
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012572032574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.21
+  m_Center: {x: 0, y: 0, z: 0}

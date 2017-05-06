@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &124840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 494292}
+  - 33: {fileID: 3350896}
+  - 23: {fileID: 2306702}
+  - 65: {fileID: 6519010}
+  - 54: {fileID: 5417452}
+  - 114: {fileID: 114000010708861172}
+  - 114: {fileID: 114000010231026192}
+  m_Layer: 0
+  m_Name: BowlingPin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &494292
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_LocalRotation: {x: -0.7068085, y: 0.020540055, z: 0.020540053, w: 0.7068084}
+  m_LocalPosition: {x: 229.98946, y: 5.12, z: 105.31946}
+  m_LocalScale: {x: 2.499055, y: 2.499055, z: 2.499055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2306702
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 14432f6aeb1ea8c41abf39c17c9ef3f4, type: 2}
+  - {fileID: 2100000, guid: de586aed44611c24c9b4a7767dc82786, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3350896
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_Mesh: {fileID: 4300000, guid: 14f21a5b5a6b53e4e8645d60300dc5ce, type: 3}
+--- !u!54 &5417452
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  serializedVersion: 2
+  m_Mass: 25
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6519010
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6185974, y: 0.6044141, z: 2.138999}
+  m_Center: {x: -0.0038316995, y: -0.0032596882, z: 0.18533345}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 124840}
+  m_IsPrefabParent: 1
+--- !u!114 &114000010231026192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8f3c43569b023429fc76f14f64a1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashPrefab: {fileID: 1000011438815952, guid: 0f5985c0d39a36e46bf9d727cfc7c37c,
+    type: 2}
+--- !u!114 &114000010708861172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50dfe65e2b2ae94083c1687dbe744fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_friendlyName: Local Multiplayer Audio Source
+  m_clip: {fileID: 8300000, guid: 0b9fc37dd90b7c54f93f8f0a1349dae0, type: 3}
+  m_output: {fileID: 0}
+  m_mute: 0
+  m_bypassEffects: 0
+  m_bypassListenerEffects: 0
+  m_bypassReverbZones: 0
+  m_playOnAwake: 0
+  m_loop: 0
+  m_priority: 128
+  m_volume: 0.555
+  m_pitch: 1
+  m_stereoPan: 0
+  m_spatialBlend: 1
+  m_reverbZoneMix: 1
+  m_dopplerLevel: 1
+  m_spread: 0
+  m_volumeRolloff: 0
+  m_minDistance: 1
+  m_maxDistance: 500
+  m_sourceObject: {fileID: 0}
+  m_audioSource: {fileID: 0}

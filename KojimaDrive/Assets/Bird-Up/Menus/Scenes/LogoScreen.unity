@@ -1,0 +1,2531 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 4
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+  m_LightingDataAsset: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: 0.16666667
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!21 &80396342
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Cutoff FX
+  m_Shader: {fileID: 4800000, guid: 8c2b4236a6389474fb23aac53aff9385, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _TransitionTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 6ffbadbf09816794cad9d2a37d619e40, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _Cutoff
+      second: 0
+    - first:
+        name: _CutoffFade
+      second: 0.109
+    - first:
+        name: _CutoffInner
+      second: 0
+    - first:
+        name: _CutoffMiddle
+      second: 0
+    - first:
+        name: _Distort
+      second: 0
+    - first:
+        name: _Fade
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color2
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color3
+      second: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &144075973 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013720829440, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 566318892}
+--- !u!1 &250777680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 250777681}
+  - 33: {fileID: 250777684}
+  - 64: {fileID: 250777683}
+  - 23: {fileID: 250777682}
+  - 114: {fileID: 250777687}
+  - 114: {fileID: 250777686}
+  - 82: {fileID: 250777685}
+  m_Layer: 5
+  m_Name: CarIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &250777681
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -371, y: 516, z: 17.15}
+  m_LocalScale: {x: 2725.135, y: 2718.8086, z: 1.5221915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1034625780}
+  - {fileID: 1779404308}
+  m_Father: {fileID: 144075973}
+  m_RootOrder: 3
+--- !u!23 &250777682
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 785db2fe9fc519948864cbbfb4041d39, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &250777683
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &250777684
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &250777685
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1e460176816afc74caf779e11b466069, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &250777686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f1fef879e08a745a888c6c136bf622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartPos: {x: -371, y: 475, z: 13.18}
+  m_EndPos: {x: 3413, y: 475, z: 13.18}
+  m_fSpeed: 3
+  m_fSoundDelay: 1
+  m_fDelay: 4
+  m_bRunning: 1
+  m_TransListener: {fileID: 624437204}
+  m_fTimeToFlyFirstLogo: 0.16
+  m_Flyaway: {fileID: 1383376211}
+  m_Snd: {fileID: 250777685}
+--- !u!114 &250777687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250777680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f70c972a4a4687479c1eaadb41fcdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Master: {fileID: 1056821962}
+  m_eAdjustMode: 1
+  m_bAdjustTypogenicWordwrap: 0
+  m_bAdjustTypogenicCharacterSize: 0
+--- !u!1 &362624785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011565016722, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 362624786}
+  - 33: {fileID: 362624789}
+  - 64: {fileID: 362624788}
+  - 23: {fileID: 362624787}
+  m_Layer: 5
+  m_Name: Background (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362624786
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000010170343774, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362624785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1440719, y: -0.0030000021, z: 0}
+  m_LocalScale: {x: 1.4168366, y: 1.0081872, z: 0.57412195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1497991360}
+  m_RootOrder: 0
+--- !u!23 &362624787
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000011101486678, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362624785}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6952fb9efae321b438b91bf7f6e3cfe0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &362624788
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 64000011152124486, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362624785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &362624789
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000011276212456, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362624785}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &518040009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 518040012}
+  - 114: {fileID: 518040011}
+  m_Layer: 0
+  m_Name: FadeIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &518040011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518040009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf9d5d4b1b96544cb88b0cb994841bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bLockInputWhileRunning: 0
+  m_bLockPlayerInputWhileRunning: 0
+  m_strTransitionChannel: GENERIC
+  m_bInterruptTransitionOnDestroy: 0
+  m_bFireKJDEvents: 1
+  m_bCustomKJDCompletionEvent: 0
+  m_eCustomCompletionEvent: 0
+  m_UIEventListeners: []
+  m_bInterruptTransitionDuringOverride: 0
+  m_strTargetPostFXStack: TransitionFX
+  m_fTransitionTime: 0.5
+  m_fTransitionProgress: 0
+  m_TargetPostFXObjects:
+  - m_strPostFXStackMember: Cutoff
+    m_PostFXStackMember: {fileID: 976437588}
+    m_StartState: []
+    m_nStartPasses: 0
+    m_EndState:
+    - m_Name: _TransitionTex
+      m_PrettyName: Transition Tex
+      m_Type: 4
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 2800000, guid: bd3894836316bcc41a5baf80ecb9a549, type: 3}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color
+      m_PrettyName: Color
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color2
+      m_PrettyName: Color 2
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color3
+      m_PrettyName: Color 3
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Cutoff
+      m_PrettyName: Cutoff
+      m_Type: 3
+      m_fVal: 2
+      m_fRangeMin: 0
+      m_fRangeMax: 10
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffFade
+      m_PrettyName: Cutoff Fade
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffMiddle
+      m_PrettyName: Cutoff Middle
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffInner
+      m_PrettyName: Cutoff Inner
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Distort
+      m_PrettyName: Distort
+      m_Type: 2
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Fade
+      m_PrettyName: Fade
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
+        - time: 1
+          value: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 1
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    m_nEndPasses: 1
+    m_bAlterPasses: 1
+    m_bLerpPasses: 0
+    m_bCurvePasses: 0
+    m_PassesCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_bEnablePFXO: 1
+    m_bAlterPFXO: 1
+    m_strLastValidName: Cutoff
+  m_fLerpState: 0
+  m_bTransitionOnStart: 1
+  m_bDestroySelfOnCompletion: 0
+  m_bDestroyGOOnCompletion: 0
+  m_bRevertToInitialValuesOnCompletion: 0
+  m_bPlayInReverse: 0
+  m_bUseUnscaledTime: 0
+--- !u!4 &518040012
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518040009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.7650156, y: 0.044485718, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!1001 &566318892
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -12.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012334486358, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011565016722, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012567826786, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23000011101486678, guid: d09c78a34d446f94e9137be41d9ddad5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6952fb9efae321b438b91bf7f6e3cfe0, type: 2}
+    - target: {fileID: 23000013679925114, guid: d09c78a34d446f94e9137be41d9ddad5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5be6e4505b81a354ea93277b42fb3827, type: 2}
+    - target: {fileID: 20000012923853440, guid: d09c78a34d446f94e9137be41d9ddad5,
+        type: 2}
+      propertyPath: m_Depth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010170343774, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014066684098, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010777626584, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d09c78a34d446f94e9137be41d9ddad5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &591737549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000012567826786, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 591737550}
+  - 33: {fileID: 591737553}
+  - 64: {fileID: 591737552}
+  - 23: {fileID: 591737551}
+  - 114: {fileID: 591737555}
+  m_Layer: 5
+  m_Name: UWELogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591737550
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012209954404, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591737549}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 29.2}
+  m_LocalScale: {x: 1200.5659, y: 494.11588, z: 0.3991243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 144075973}
+  m_RootOrder: 2
+--- !u!23 &591737551
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000013679925114, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591737549}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 704ef6fc01b778f48bf8e7e3aa1a0d32, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &591737552
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 64000010502314186, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591737549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &591737553
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000013427276928, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591737549}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &591737555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591737549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f70c972a4a4687479c1eaadb41fcdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Master: {fileID: 1056821962}
+  m_eAdjustMode: 6
+  m_bAdjustTypogenicWordwrap: 0
+  m_bAdjustTypogenicCharacterSize: 0
+--- !u!1 &624437202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 624437205}
+  - 114: {fileID: 624437204}
+  - 114: {fileID: 624437203}
+  m_Layer: 0
+  m_Name: FadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &624437203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624437202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8b070463e334949959dc7107a001ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TriggeredTransition: {fileID: 0}
+  m_ScenesToLoad:
+  - name: Bird-Up/Menus/Scenes/StartScreen
+    m_loadSceneMode: 0
+--- !u!114 &624437204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624437202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf9d5d4b1b96544cb88b0cb994841bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bLockInputWhileRunning: 0
+  m_bLockPlayerInputWhileRunning: 0
+  m_strTransitionChannel: GENERIC
+  m_bInterruptTransitionOnDestroy: 0
+  m_bFireKJDEvents: 1
+  m_bCustomKJDCompletionEvent: 0
+  m_eCustomCompletionEvent: 0
+  m_UIEventListeners:
+  - {fileID: 624437203}
+  m_bInterruptTransitionDuringOverride: 0
+  m_strTargetPostFXStack: TransitionFX
+  m_fTransitionTime: 5
+  m_fTransitionProgress: 0
+  m_TargetPostFXObjects:
+  - m_strPostFXStackMember: Cutoff
+    m_PostFXStackMember: {fileID: 976437588}
+    m_StartState: []
+    m_nStartPasses: 0
+    m_EndState:
+    - m_Name: _TransitionTex
+      m_PrettyName: Transition Tex
+      m_Type: 4
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 2800000, guid: bd3894836316bcc41a5baf80ecb9a549, type: 3}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color
+      m_PrettyName: Color
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color2
+      m_PrettyName: Color 2
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Color3
+      m_PrettyName: Color 3
+      m_Type: 0
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 1}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 1, g: 1, b: 1, a: 1}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _Cutoff
+      m_PrettyName: Cutoff
+      m_Type: 3
+      m_fVal: 2
+      m_fRangeMin: 0
+      m_fRangeMax: 10
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffFade
+      m_PrettyName: Cutoff Fade
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffMiddle
+      m_PrettyName: Cutoff Middle
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _CutoffInner
+      m_PrettyName: Cutoff Inner
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Distort
+      m_PrettyName: Distort
+      m_Type: 2
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 0
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 0
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 0
+      m_bLerpInTransition: 0
+    - m_Name: _Fade
+      m_PrettyName: Fade
+      m_Type: 3
+      m_fVal: 0
+      m_fRangeMin: 0
+      m_fRangeMax: 1
+      m_colVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texVal: {fileID: 0}
+      m_fDefaultVal: 0
+      m_colDefaultVal: {r: 0, g: 0, b: 0, a: 0}
+      m_vecDefaultVal: {x: 0, y: 0, z: 0, w: 0}
+      m_texDefaultVal: {fileID: 0}
+      m_Curves:
+      - serializedVersion: 2
+        m_Curve:
+        - time: 0.6487549
+          value: 0
+          inSlope: 2.8470147
+          outSlope: 2.8470147
+          tangentMode: 10
+        - time: 1
+          value: 1
+          inSlope: 2.8470147
+          outSlope: 2.8470147
+          tangentMode: 10
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_bUseAnimationCurves: 1
+      m_bSetFirstFrameToInitialState: 0
+      m_bAddToInitialState: 0
+      m_bChangeInTransition: 1
+      m_bLerpInTransition: 0
+    m_nEndPasses: 1
+    m_bAlterPasses: 1
+    m_bLerpPasses: 0
+    m_bCurvePasses: 0
+    m_PassesCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_bEnablePFXO: 1
+    m_bAlterPFXO: 1
+    m_strLastValidName: Cutoff
+  m_fLerpState: 0
+  m_bTransitionOnStart: 0
+  m_bDestroySelfOnCompletion: 0
+  m_bDestroyGOOnCompletion: 0
+  m_bRevertToInitialValuesOnCompletion: 0
+  m_bPlayInReverse: 0
+  m_bUseUnscaledTime: 0
+--- !u!4 &624437205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624437202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.7650156, y: 0.044485718, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!21 &648502440
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Simple Box Blur
+  m_Shader: {fileID: 4800000, guid: 950dc2e7cc9e2be40978196e4f526583, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MaskTexture
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &757542314
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Simple Box Blur
+  m_Shader: {fileID: 4800000, guid: 950dc2e7cc9e2be40978196e4f526583, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MaskTexture
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!1001 &976437587
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.45372504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.1194704
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.421875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013846154092, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010681370376, guid: fcf7ad8a5006ca8468538f9ca5e6634a,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2135516205}
+    - target: {fileID: 114000012902624272, guid: fcf7ad8a5006ca8468538f9ca5e6634a,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 757542314}
+    - target: {fileID: 114000010540934872, guid: fcf7ad8a5006ca8468538f9ca5e6634a,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1393793334}
+    - target: {fileID: 114000010783723586, guid: fcf7ad8a5006ca8468538f9ca5e6634a,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1599118158}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fcf7ad8a5006ca8468538f9ca5e6634a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &976437588 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010783723586, guid: fcf7ad8a5006ca8468538f9ca5e6634a,
+    type: 2}
+  m_PrefabInternal: {fileID: 976437587}
+  m_Script: {fileID: 11500000, guid: 7295645c85f304a4bb6f2b6c5081cc55, type: 3}
+--- !u!1 &1034625779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011565016722, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1034625780}
+  - 33: {fileID: 1034625783}
+  - 64: {fileID: 1034625782}
+  - 23: {fileID: 1034625781}
+  m_Layer: 5
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1034625780
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000010170343774, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034625779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0420722, y: -0.0030000024, z: 0}
+  m_LocalScale: {x: 1.1237202, y: 1.008187, z: 0.57412124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 250777681}
+  m_RootOrder: 0
+--- !u!23 &1034625781
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000011101486678, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034625779}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6952fb9efae321b438b91bf7f6e3cfe0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1034625782
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 64000011152124486, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034625779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1034625783
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000011276212456, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034625779}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1044331864 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014066684098, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 566318892}
+--- !u!81 &1044331867
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044331864}
+  m_Enabled: 1
+--- !u!114 &1056821962 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011159600882, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 566318892}
+  m_Script: {fileID: 11500000, guid: 566dd36d69a68c147b7589c3d44c9af6, type: 3}
+--- !u!21 &1058134409
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Image Adjustment
+  m_Shader: {fileID: 4800000, guid: b2f60d24e756b21429c4f7c64dd971df, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BrightnessAmount
+      second: 0
+    - first:
+        name: _ContrastAmount
+      second: 0
+    - first:
+        name: _HSVRangeMax
+      second: 1
+    - first:
+        name: _HSVRangeMin
+      second: 0
+    - first:
+        name: _SaturateAmount
+      second: 0
+    m_Colors:
+    - first:
+        name: _HSVAAdjust
+      second: {r: 0, g: 0, b: 0, a: 0}
+--- !u!21 &1061692092
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Image Effects/RadialBlurFilter
+  m_Shader: {fileID: 4800000, guid: d235dd56bce69ec48aa73f8c8f82f160, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _SampleDist
+      second: 1
+    - first:
+        name: _SamplePosX
+      second: 0.5
+    - first:
+        name: _SamplePosY
+      second: 0.5
+    - first:
+        name: _SampleStrength
+      second: 2.2
+    m_Colors: []
+--- !u!1 &1383376204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000012567826786, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1383376205}
+  - 33: {fileID: 1383376210}
+  - 23: {fileID: 1383376209}
+  - 114: {fileID: 1383376208}
+  - 114: {fileID: 1383376211}
+  - 82: {fileID: 1383376206}
+  m_Layer: 5
+  m_Name: PWLogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383376205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012209954404, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 8.1}
+  m_LocalScale: {x: 578.6495, y: 663.2317, z: 0.5357223}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 144075973}
+  m_RootOrder: 6
+--- !u!82 &1383376206
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1bfb050396f38364092071d7b6c040d8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.649
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &1383376208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f70c972a4a4687479c1eaadb41fcdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Master: {fileID: 1056821962}
+  m_eAdjustMode: 6
+  m_bAdjustTypogenicWordwrap: 0
+  m_bAdjustTypogenicCharacterSize: 0
+--- !u!23 &1383376209
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000013679925114, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e548822d58b078a468d4f257c435d4aa, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1383376210
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000013427276928, guid: d09c78a34d446f94e9137be41d9ddad5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1383376211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383376204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283e253efe764c94f893475a3bd71004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rotation: {x: 0, y: 0, z: -250}
+  m_movement: {x: 7000, y: 1500, z: 0}
+  m_Crashsnd: {fileID: 1383376206}
+--- !u!21 &1393793334
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Image Effects/RadialBlurFilter
+  m_Shader: {fileID: 4800000, guid: d235dd56bce69ec48aa73f8c8f82f160, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _SampleDist
+      second: 1
+    - first:
+        name: _SamplePosX
+      second: 0.5
+    - first:
+        name: _SamplePosY
+      second: 0.5
+    - first:
+        name: _SampleStrength
+      second: 2.2
+    m_Colors: []
+--- !u!1 &1497991359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1497991360}
+  - 33: {fileID: 1497991364}
+  - 64: {fileID: 1497991363}
+  - 23: {fileID: 1497991362}
+  - 114: {fileID: 1497991361}
+  m_Layer: 0
+  m_Name: CarOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1497991360
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497991359}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4834, y: 475, z: 13.18}
+  m_LocalScale: {x: 3111.0413, y: 3111.0413, z: 1.7417899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 362624786}
+  m_Father: {fileID: 144075973}
+  m_RootOrder: 4
+--- !u!114 &1497991361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497991359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f70c972a4a4687479c1eaadb41fcdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Master: {fileID: 1056821962}
+  m_eAdjustMode: 1
+  m_bAdjustTypogenicWordwrap: 0
+  m_bAdjustTypogenicCharacterSize: 0
+--- !u!23 &1497991362
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497991359}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: d7158ceaa93287b46b89542f22cb8d6e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1497991363
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497991359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1497991364
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497991359}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1599118158
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Cutoff FX
+  m_Shader: {fileID: 4800000, guid: 8c2b4236a6389474fb23aac53aff9385, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _TransitionTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 6ffbadbf09816794cad9d2a37d619e40, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _Cutoff
+      second: 0
+    - first:
+        name: _CutoffFade
+      second: 0.109
+    - first:
+        name: _CutoffInner
+      second: 0
+    - first:
+        name: _CutoffMiddle
+      second: 0
+    - first:
+        name: _Distort
+      second: 0
+    - first:
+        name: _Fade
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color2
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color3
+      second: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1 &1779404307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1779404308}
+  - 33: {fileID: 1779404311}
+  - 64: {fileID: 1779404310}
+  - 23: {fileID: 1779404309}
+  m_Layer: 5
+  m_Name: CarIn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779404308
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779404307}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 250777681}
+  m_RootOrder: 1
+--- !u!23 &1779404309
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779404307}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 59a58a864890c1a468d139ceed34d701, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1779404310
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779404307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1779404311
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779404307}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1972721630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1972721631}
+  - 33: {fileID: 1972721634}
+  - 64: {fileID: 1972721633}
+  - 23: {fileID: 1972721632}
+  m_Layer: 0
+  m_Name: Car (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1972721631
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972721630}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 709, y: 444, z: 13.18}
+  m_LocalScale: {x: 1788.669, y: 763.1654, z: 2.5962377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 144075973}
+  m_RootOrder: 5
+--- !u!23 &1972721632
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972721630}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: de644c27a7ed02a46aea6bb4f768e462, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1972721633
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972721630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1972721634
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972721630}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1987548080
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472568, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ed45565ce784d184aaa3bd05bdfde2b2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2003616706
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.1792004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -120.33545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011178256440, guid: f4782d482dba52846a8881b88c442285, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f4782d482dba52846a8881b88c442285, type: 2}
+  m_IsPrefabParent: 0
+--- !u!21 &2135516205
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Post Processing/Image Adjustment
+  m_Shader: {fileID: 4800000, guid: b2f60d24e756b21429c4f7c64dd971df, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BrightnessAmount
+      second: 0
+    - first:
+        name: _ContrastAmount
+      second: 0
+    - first:
+        name: _HSVRangeMax
+      second: 1
+    - first:
+        name: _HSVRangeMin
+      second: 0
+    - first:
+        name: _SaturateAmount
+      second: 0
+    m_Colors:
+    - first:
+        name: _HSVAAdjust
+      second: {r: 0, g: 0, b: 0, a: 0}

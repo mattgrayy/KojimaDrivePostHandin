@@ -1,0 +1,17 @@
+<font>
+  <info face="RoundedSquare" size="64" bold="0" italic="0" charset="" unicode="" stretchH="100" smooth="1" aa="1" padding="2,2,2,2" spacing="0,0" outline="0"/>
+  <common lineHeight="64.06" base="52" scaleW="128" scaleH="512" pages="1" packed="0"/>
+  <pages>
+    <page id="0" file="RoundedSquare.png"/>
+  </pages>
+  <chars count="7">
+    <char id="49" x="2" y="2" width="70" height="16" xoffset="2" yoffset="41.66" xadvance="64" page="0" chnl="15"/>
+    <char id="50" x="2" y="20" width="70" height="48" xoffset="2" yoffset="0" xadvance="64" page="0" chnl="15"/>
+    <char id="51" x="2" y="70" width="70" height="29" xoffset="2" yoffset="41.66" xadvance="64" page="0" chnl="15"/>
+    <char id="52" x="2" y="101" width="70" height="22" xoffset="2" yoffset="41.66" xadvance="64" page="0" chnl="15"/>
+    <char id="53" x="2" y="125" width="70" height="16" xoffset="2" yoffset="41.66" xadvance="64" page="0" chnl="15"/>
+    <char id="54" x="2" y="143" width="60" height="68" xoffset="8.66" yoffset="1.28" xadvance="64" page="0" chnl="15"/>
+    <char id="55" x="2" y="213" width="60" height="68" xoffset="8.66" yoffset="1.28" xadvance="64" page="0" chnl="15"/>
+    <char id="32" x="0" y="0" width="0" height="0" xoffset="8.66" yoffset="1.28" xadvance="64" page="0" chnl="15"/>
+  </chars>
+</font>

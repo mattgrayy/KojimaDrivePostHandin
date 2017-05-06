@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1aff484d3473fc848bb98d5f541cb643
+timeCreated: 1493722662
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_skidSmokePrefab: {fileID: 163232, guid: 319f42c497bbff84dab1a7082bff49a4, type: 2}
+  - m_skidMarkPrefab: {fileID: 139632, guid: b25b52c3fc9bbbf4b90c7a989c6a6999, type: 2}
+  - skidMaterial: {fileID: 2100000, guid: 744ea025dc0b931469e92e8ecd686ac8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Level
+  - Bomb
+  - RacePoint
+  - BombSystem
+  - PowerUp
+  - LEVEL
+  - DaSText
+  - Teleporter
+  - Water
+  - Ramp
+  - MultiSourceListener
+  - Tornado
+  - Pullable
+  - Tree
+  - DropPoint
+  - RacePoint
+  - WayPoint
+  - Debug
+  - Deliver
+  - Rabbit
+  - Chicken
+  - Sun
+  - leaf
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - InWorldUIP1
+  - InWorldUIP2
+  - InWorldUIP3
+  - InWorldUIP4
+  - InWorldUI_Global
+  - SkyboxOcean
+  - Car
+  - InWorldCheckpointP1
+  - InWorldCheckpointP2
+  - InWorldCheckpointP3
+  - InWorldCheckpointP4
+  - Tree
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

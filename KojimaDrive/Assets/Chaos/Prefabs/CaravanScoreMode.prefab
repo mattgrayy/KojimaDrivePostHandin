@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013096221638}
+  m_IsPrefabParent: 1
+--- !u!1 &1000010037379488
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012967971532}
+  m_Layer: 0
+  m_Name: Spawn 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000010892070152
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011780456318}
+  m_Layer: 0
+  m_Name: Spawn 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011578836142
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010703403384}
+  m_Layer: 0
+  m_Name: Spawn 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000012341718340
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010978025964}
+  m_Layer: 0
+  m_Name: Spawn 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000012882745662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000014056935598}
+  m_Layer: 0
+  m_Name: SpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000013096221638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011232517628}
+  - 65: {fileID: 65000013651265684}
+  - 114: {fileID: 114000014017063564}
+  - 114: {fileID: 114000010140785968}
+  m_Layer: 0
+  m_Name: CaravanScoreMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010703403384
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011578836142}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.44, y: 0, z: 1.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014056935598}
+  m_RootOrder: 2
+--- !u!4 &4000010978025964
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012341718340}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.4, y: 0, z: 1.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014056935598}
+  m_RootOrder: 3
+--- !u!4 &4000011232517628
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013096221638}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2363.9, y: 50.11, z: 2879.19}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000014056935598}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &4000011780456318
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010892070152}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.444, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014056935598}
+  m_RootOrder: 0
+--- !u!4 &4000012967971532
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010037379488}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.427, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014056935598}
+  m_RootOrder: 1
+--- !u!4 &4000014056935598
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012882745662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05, y: -1.41, z: 56.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000011780456318}
+  - {fileID: 4000012967971532}
+  - {fileID: 4000010703403384}
+  - {fileID: 4000010978025964}
+  m_Father: {fileID: 4000011232517628}
+  m_RootOrder: 0
+--- !u!65 &65000013651265684
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013096221638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.75, y: 1.75, z: 1.75}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000010140785968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013096221638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca82f0179d27af245b7c529090e1664f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_modeWidth: 1
+  m_modeHeight: 1
+  m_mode: 7
+  m_numberOfPlayers: 0
+  m_playerScores: 
+  m_winningScore: 0
+  m_resetModelsOnEnd: 1
+  m_startingModels: []
+  m_lockCarChanges: 0
+  m_teams: []
+  m_spawns:
+  - m_name: 
+    m_transform: {fileID: 4000011780456318}
+    m_inUse: 0
+  - m_name: 
+    m_transform: {fileID: 4000012967971532}
+    m_inUse: 0
+  - m_name: 
+    m_transform: {fileID: 4000010703403384}
+    m_inUse: 0
+  - m_name: 
+    m_transform: {fileID: 4000010978025964}
+    m_inUse: 0
+  m_phases:
+  - m_phaseName: Inactive
+    m_nextPhase: Timer
+    m_previousPhase: 
+    m_length: 0
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  - m_phaseName: Timer
+    m_nextPhase: Inactive
+    m_previousPhase: 
+    m_length: 250
+    m_delay: 0
+    m_minutes: 1
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  m_currentPhase:
+    m_phaseName: 
+    m_nextPhase: 
+    m_previousPhase: 
+    m_length: 0
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  m_timerObject: {fileID: 121072, guid: bde9dfd8a8a666d4eac2ef5320c4000a, type: 2}
+  m_CustomLoadTransition: {fileID: 0}
+  m_bDisplayTextIntro: 1
+  m_strEventName: Caravan Chaos
+  m_strEventByline: Score caravans with your grapple!
+  m_iCaravanCount: 20
+  caravanSpawnPoint: {fileID: 0}
+  caravanScoreAreaSpawnPoint: {fileID: 0}
+  caravanPrefab: {fileID: 4000012428421760, guid: d0df6c9fb3a1a454e905615071fd42df,
+    type: 2}
+  caravanScoreAreaPrefab: {fileID: 4000013388751984, guid: ae4ae18188e445344aaa9cdc087f2f3d,
+    type: 2}
+--- !u!114 &114000014017063564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013096221638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2dbbd8c7804746a3249d7d38d4b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

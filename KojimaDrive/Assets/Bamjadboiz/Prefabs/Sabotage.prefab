@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000010653012748}
+  m_IsPrefabParent: 1
+--- !u!1 &1000010653012748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010180475146}
+  - 114: {fileID: 114000011316414102}
+  - 65: {fileID: 65000012415135654}
+  - 114: {fileID: 114000013086519172}
+  m_Layer: 0
+  m_Name: Sabotage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010180475146
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010653012748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.6, y: 35.99057, z: 98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &65000012415135654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010653012748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 200, z: 200}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000011316414102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010653012748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f0abf41eb60474193b78180cf4bea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_modeWidth: 300
+  m_modeHeight: 300
+  m_mode: 5
+  m_numberOfPlayers: 4
+  m_playerScores: 00000000000000000000000000000000
+  m_winningScore: 3
+  m_resetModelsOnEnd: 1
+  m_startingModels:
+  - IceCreamVan
+  - Manta
+  - Opel
+  - MonteCarlo
+  m_lockCarChanges: 0
+  m_teams: []
+  m_spawns: []
+  m_phases:
+  - m_phaseName: Setup
+    m_nextPhase: Running
+    m_previousPhase: 
+    m_length: 5
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  - m_phaseName: Running
+    m_nextPhase: Ending
+    m_previousPhase: 
+    m_length: 30
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  - m_phaseName: Ending
+    m_nextPhase: Setup
+    m_previousPhase: 
+    m_length: 5
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  - m_phaseName: Dynamic
+    m_nextPhase: 
+    m_previousPhase: 
+    m_length: 0
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  m_currentPhase:
+    m_phaseName: Running
+    m_nextPhase: Ending
+    m_previousPhase: 
+    m_length: 30
+    m_delay: 0
+    m_minutes: 0
+    m_message: 
+    m_timerObject: {fileID: 0}
+    m_timer: {fileID: 0}
+  m_timerObject: {fileID: 121072, guid: bde9dfd8a8a666d4eac2ef5320c4000a, type: 2}
+  m_CustomLoadTransition: {fileID: 0}
+  m_bDisplayTextIntro: 1
+  m_strEventName: 
+  m_strEventByline: 
+  countdownCanvas: {fileID: 0}
+  countdownText: {fileID: 0}
+  countdownDuration: 4
+  roundDuration: 30
+  intervalDuration: 5
+  roundTimer: 28.185946
+  roundInterval: 5
+  gamemodeRunning: 1
+  outOfCircleDuration: 3
+  chaserSurvived: 1
+  trapInterval: 5
+  playerScores: 00000000000000000000000000000000
+  playerObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  surviveTime: 1.81405
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  chaserName: IceCreamVan_Prefab
+  m_sabotageZoneScript: {fileID: 0}
+  m_chaserArrow: {fileID: 0}
+  m_arrowLocalOffset: {x: 0, y: 2.5, z: -1}
+--- !u!114 &114000013086519172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010653012748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db2dbbd8c7804746a3249d7d38d4b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
