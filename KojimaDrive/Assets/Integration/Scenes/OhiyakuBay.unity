@@ -1259,6 +1259,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPlayer: 0
   newZoneActivityLevel: 1
+--- !u!1 &213304298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 213304300}
+  - 114: {fileID: 213304299}
+  m_Layer: 0
+  m_Name: camera spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &213304299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 213304298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3f7f55ccd34094b872d10f2d80ebe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: 34.862793, y: 0, z: 8.076202}
+  - {x: 329.208, y: 0, z: 224.67142}
+  - {x: 163.71667, y: 12.382629, z: 201.42392}
+  - {x: 65.17822, y: -12.652588, z: 67.238045}
+  - {x: -98.129395, y: -17.615173, z: 1.657341}
+  - {x: -451.8506, y: -48.66101, z: 24.959236}
+  - {x: -116.58679, y: -48.66101, z: 75.80206}
+  modes: 000000000000000000000000
+  loop: 0
+--- !u!4 &213304300
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 213304298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1782.7, y: 641, z: -100.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
 --- !u!64 &227276977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2537,6 +2587,91 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424862179}
   m_Mesh: {fileID: 4300000, guid: 49ef06acc82045a488af1090ac636d84, type: 3}
+--- !u!1 &431199926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431199929}
+  - 20: {fileID: 431199928}
+  - 114: {fileID: 431199927}
+  m_Layer: 0
+  m_Name: camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &431199927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431199926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9b25095b26a4b4684994666cbc6141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_defaultSpline: {fileID: 213304299}
+  m_speed: 15
+  m_resolution: 0.1
+  m_lookForward: 0
+  m_allowRealtimeSplineAlterations: 0
+  m_progress: 0
+  m_mode: 0
+  goingForward: 1
+  m_bEaseForwardLooking: 0
+  m_fMaximumDegreesOfRotationPerTick: 3
+--- !u!20 &431199928
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431199926}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &431199929
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431199926}
+  m_LocalRotation: {x: 0.023253249, y: 0.8393796, z: -0.03602147, w: 0.54185206}
+  m_LocalPosition: {x: 1767.3839, y: 897.9557, z: -152.45164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 4.873, y: 114.122, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!114 &433572530
 MonoBehaviour:
   m_ObjectHideFlags: 0
